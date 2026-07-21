@@ -106,6 +106,13 @@
     .gallery-item .placeholder-bg {
       transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(31, 31, 30, 0.42) 0%, transparent 45%);
+      pointer-events: none;
+    }
     .gallery-item:hover img,
     .gallery-item:hover .placeholder-bg {
       transform: scale(1.06);
@@ -155,6 +162,11 @@
     .villa-guide summary {
       list-style: none;
       cursor: pointer;
+      border-radius: 0.25rem;
+    }
+    .villa-guide summary:focus-visible {
+      outline: 2px solid #6d8260;
+      outline-offset: 2px;
     }
     .villa-guide summary::-webkit-details-marker {
       display: none;
@@ -187,25 +199,134 @@
     body.lightbox-open {
       overflow: hidden;
     }
+
+    /* Anchor offset for fixed header */
+    html {
+      scroll-padding-top: 6.5rem;
+    }
+
+    /* Focus — keyboard only, brand-aligned */
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #6d8260;
+      outline-offset: 3px;
+    }
+
+    /* Display & heading tracking */
+    .hero-title {
+      letter-spacing: -0.025em;
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      line-height: 1.05;
+    }
+    .section-title {
+      letter-spacing: -0.015em;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.1;
+    }
+    .eyebrow {
+      letter-spacing: 0.08em;
+    }
+    .btn-label {
+      letter-spacing: 0.02em;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      padding: 0.75rem 1.25rem;
+      background: #566a4c;
+      color: #fdfcfa;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transform: translateY(-120%);
+      transition: transform 0.15s ease;
+    }
+    .skip-link:focus-visible {
+      transform: translateY(0);
+    }
+
+    /* Carousel dot — 44px touch target */
+    .carousel-dot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+    .carousel-dot-inner {
+      display: block;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 9999px;
+      background: rgba(253, 252, 250, 0.5);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+    .carousel-dot:hover .carousel-dot-inner,
+    .carousel-dot:focus-visible .carousel-dot-inner {
+      background: rgba(253, 252, 250, 0.8);
+    }
+    .carousel-dot.is-active .carousel-dot-inner {
+      transform: scale(1.25);
+      background: #fdfcfa;
+    }
+
+    /* Button press feedback */
+    .btn-interactive:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+
+    /* Gallery caption legibility */
+    .gallery-label {
+      text-shadow: 0 1px 10px rgba(31, 31, 30, 0.55);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .carousel-slide { transition: none; }
+      .gallery-item img,
+      .gallery-item .placeholder-bg { transition: none; }
+      .gallery-item:hover img,
+      .gallery-item:hover .placeholder-bg { transform: none; }
+      #gallery-lightbox { transition: none; }
+      .lightbox-slide { transition: none; }
+      .btn-interactive:active:not(:disabled) { transform: none; }
+      .skip-link { transition: none; }
+    }
   </style>
 </head>
 <body class="font-sans text-charcoal-800 bg-cream-50 antialiased">
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- ========== STICKY HEADER ========== -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mt-4 flex items-center justify-between rounded-2xl bg-cream-50/70 px-6 py-4 shadow-sm backdrop-blur-md border border-cream-200/60">
-        <a href="#hero" class="font-serif text-2xl font-semibold tracking-wide text-charcoal-900">
+  <header id="header" data-od-id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
+    <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Main navigation">
+      <div id="header-bar" class="mt-4 flex items-center justify-between rounded-2xl bg-cream-50/70 px-6 py-4 shadow-sm backdrop-blur-md border border-cream-200/60 transition-shadow duration-300">
+        <a href="#hero" data-od-id="site-logo" class="font-serif text-2xl font-semibold tracking-tight text-charcoal-900">
           Mountain Villa
         </a>
-        <ul class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-charcoal-700">
-          <li><a href="#about" class="hover:text-sage-600 transition-colors">About</a></li>
-          <li><a href="#gallery" class="hover:text-sage-600 transition-colors">Gallery</a></li>
-          <li><a href="#pricing" class="hover:text-sage-600 transition-colors">Pricing</a></li>
-          <li><a href="#contact" class="hover:text-sage-600 transition-colors">Contact</a></li>
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium btn-label text-charcoal-700">
+          <li><a href="#about" class="rounded-sm py-1 hover:text-sage-600 transition-colors">About</a></li>
+          <li><a href="#gallery" class="rounded-sm py-1 hover:text-sage-600 transition-colors">Gallery</a></li>
+          <li><a href="#pricing" class="rounded-sm py-1 hover:text-sage-600 transition-colors">Pricing</a></li>
+          <li><a href="#contact" class="rounded-sm py-1 hover:text-sage-600 transition-colors">Contact</a></li>
         </ul>
         <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-charcoal-700" aria-label="Open menu">
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-lg text-charcoal-700 hover:bg-cream-200/60 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
@@ -219,8 +340,10 @@
     </nav>
   </header>
 
+  <main id="main">
+
   <!-- ========== HERO CAROUSEL ========== -->
-  <section id="hero" class="relative h-screen min-h-[600px] overflow-hidden">
+  <section id="hero" class="relative h-screen min-h-[600px] overflow-hidden" aria-label="Hero">
     <div id="carousel" class="absolute inset-0">
       <!-- Slide 1 — demo: Unsplash · replace with assets/images/hero-villa-exterior.jpg -->
       <div class="carousel-slide active" data-index="0">
@@ -229,7 +352,7 @@
         </div>
         <div class="absolute inset-0 bg-charcoal-900/25"></div>
         <div class="absolute bottom-24 left-6 md:left-8">
-          <p class="text-xs font-medium uppercase tracking-[0.25em] text-cream-50/50">Villa Exterior View</p>
+          <p class="text-xs font-medium uppercase eyebrow text-cream-50/50">Villa Exterior View</p>
         </div>
       </div>
       <!-- Slide 2 — demo: Unsplash · replace with assets/images/hero-mountain-panorama.jpg -->
@@ -239,7 +362,7 @@
         </div>
         <div class="absolute inset-0 bg-charcoal-900/20"></div>
         <div class="absolute bottom-24 left-6 md:left-8">
-          <p class="text-xs font-medium uppercase tracking-[0.25em] text-cream-50/50">Mountain Panorama</p>
+          <p class="text-xs font-medium uppercase eyebrow text-cream-50/50">Mountain Panorama</p>
         </div>
       </div>
       <!-- Slide 3 — demo: Unsplash · replace with assets/images/hero-living-area.jpg -->
@@ -249,38 +372,38 @@
         </div>
         <div class="absolute inset-0 bg-charcoal-900/15"></div>
         <div class="absolute bottom-24 left-6 md:left-8">
-          <p class="text-xs font-medium uppercase tracking-[0.25em] text-cream-50/50">Cozy Living Area</p>
+          <p class="text-xs font-medium uppercase eyebrow text-cream-50/50">Cozy Living Area</p>
         </div>
       </div>
     </div>
 
     <!-- Hero overlay content -->
     <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-      <p class="reveal mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cream-100">Alpine Sanctuary</p>
-      <h1 class="reveal reveal-delay-1 font-serif text-5xl md:text-7xl lg:text-8xl font-medium text-cream-50 leading-tight">
+      <p class="reveal visible mb-4 text-sm font-medium uppercase eyebrow text-cream-100">Alpine Sanctuary</p>
+      <h1 class="reveal visible reveal-delay-1 font-serif hero-title font-medium text-cream-50">
         Mountain Villa
       </h1>
-      <p class="reveal reveal-delay-2 mt-10 md:mt-12 max-w-lg text-base md:text-lg text-cream-100/90 font-light leading-relaxed [text-shadow:0_2px_16px_rgba(31,31,30,0.5)]">
+      <p class="reveal visible reveal-delay-2 mt-8 md:mt-10 max-w-lg text-base md:text-lg text-cream-100/90 font-light leading-relaxed [text-shadow:0_2px_16px_rgba(31,31,30,0.5)]">
         A serene escape where luxury meets the quiet beauty of the mountains.
       </p>
-      <a href="#contact" class="reveal reveal-delay-3 mt-10 inline-block rounded-full bg-cream-50/90 px-8 py-3.5 text-sm font-medium tracking-wide text-charcoal-800 hover:bg-cream-50 transition-colors shadow-lg">
+      <a href="#contact" data-od-id="hero-cta" class="reveal visible reveal-delay-3 mt-10 inline-flex items-center justify-center min-h-[2.75rem] rounded-full bg-cream-50/90 px-8 py-3.5 text-sm font-medium btn-label text-charcoal-800 hover:bg-cream-50 transition-colors shadow-lg">
         Reserve Your Stay
       </a>
     </div>
 
     <!-- Carousel controls -->
-    <button id="carousel-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors" aria-label="Previous slide">
+    <button id="carousel-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors" aria-label="Previous slide">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
     </button>
-    <button id="carousel-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors" aria-label="Next slide">
+    <button id="carousel-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors" aria-label="Next slide">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
     </button>
 
     <!-- Indicator dots -->
-    <div id="carousel-dots" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-      <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-cream-50 transition-all scale-125" data-index="0" aria-label="Slide 1"></button>
-      <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-cream-50/50 hover:bg-cream-50/80 transition-all" data-index="1" aria-label="Slide 2"></button>
-      <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-cream-50/50 hover:bg-cream-50/80 transition-all" data-index="2" aria-label="Slide 3"></button>
+    <div id="carousel-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-1" role="tablist" aria-label="Hero slides">
+      <button type="button" class="carousel-dot is-active -mx-3" data-index="0" role="tab" aria-label="Slide 1" aria-selected="true"><span class="carousel-dot-inner"></span></button>
+      <button type="button" class="carousel-dot -mx-3" data-index="1" role="tab" aria-label="Slide 2" aria-selected="false"><span class="carousel-dot-inner"></span></button>
+      <button type="button" class="carousel-dot -mx-3" data-index="2" role="tab" aria-label="Slide 3" aria-selected="false"><span class="carousel-dot-inner"></span></button>
     </div>
   </section>
 
@@ -288,45 +411,53 @@
   <section id="about" class="py-24 md:py-32 px-6">
     <div class="mx-auto max-w-7xl">
       <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <p class="text-sm font-medium uppercase tracking-[0.25em] text-sage-500 mb-4">About the Villa</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-charcoal-900 mb-6">Crafted for Tranquility</h2>
+        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">About the Villa</p>
+        <h2 class="font-serif section-title text-charcoal-900 mb-6">Crafted for Tranquility</h2>
         <p class="text-charcoal-600 leading-relaxed">
           Perched above the valley with sweeping alpine views, Mountain Villa blends contemporary design with natural materials — a private haven for rest, reflection, and unforgettable moments.
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div class="flex flex-col gap-4 w-full" data-od-id="amenity-cards">
         <!-- Mountain View -->
-        <div class="reveal reveal-delay-1 group rounded-2xl bg-cream-100/80 border border-cream-200 p-8 hover:shadow-lg hover:shadow-sage-100/50 transition-shadow">
-          <div class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600 group-hover:bg-sage-200 transition-colors">
+        <div class="reveal reveal-delay-1 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" data-od-id="amenity-mountain-view">
+          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l9-12 4 6 3-4 5 10H3z"/></svg>
           </div>
-          <h3 class="font-serif text-xl text-charcoal-900 mb-2">Mountain View</h3>
-          <p class="text-sm text-charcoal-600 leading-relaxed">Floor-to-ceiling windows framing panoramic peaks from every room.</p>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-serif text-xl text-charcoal-900 mb-2">Mountain View</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">Floor-to-ceiling windows framing panoramic peaks from every room.</p>
+          </div>
         </div>
         <!-- Fireplace -->
-        <div class="reveal reveal-delay-2 group rounded-2xl bg-cream-100/80 border border-cream-200 p-8 hover:shadow-lg hover:shadow-sage-100/50 transition-shadow">
-          <div class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600 group-hover:bg-sage-200 transition-colors">
+        <div class="reveal reveal-delay-2 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" data-od-id="amenity-fireplace">
+          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
           </div>
-          <h3 class="font-serif text-xl text-charcoal-900 mb-2">Fireplace</h3>
-          <p class="text-sm text-charcoal-600 leading-relaxed">A stone hearth centerpiece for cozy evenings by the fire.</p>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-serif text-xl text-charcoal-900 mb-2">Fireplace</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">A stone hearth centerpiece for cozy evenings by the fire.</p>
+          </div>
         </div>
         <!-- Private Jacuzzi -->
-        <div class="reveal reveal-delay-2 group rounded-2xl bg-cream-100/80 border border-cream-200 p-8 hover:shadow-lg hover:shadow-sage-100/50 transition-shadow">
-          <div class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600 group-hover:bg-sage-200 transition-colors">
+        <div class="reveal reveal-delay-3 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" data-od-id="amenity-jacuzzi">
+          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           </div>
-          <h3 class="font-serif text-xl text-charcoal-900 mb-2">Private Jacuzzi</h3>
-          <p class="text-sm text-charcoal-600 leading-relaxed">Outdoor hot tub under the stars with forest privacy.</p>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-serif text-xl text-charcoal-900 mb-2">Private Jacuzzi</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">Outdoor hot tub under the stars with forest privacy.</p>
+          </div>
         </div>
         <!-- High-speed Wi-Fi -->
-        <div class="reveal reveal-delay-3 group rounded-2xl bg-cream-100/80 border border-cream-200 p-8 hover:shadow-lg hover:shadow-sage-100/50 transition-shadow">
-          <div class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600 group-hover:bg-sage-200 transition-colors">
+        <div class="reveal flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" style="transition-delay: 0.4s" data-od-id="amenity-wifi">
+          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.394 9.393a15 15 0 0121.212 0"/></svg>
           </div>
-          <h3 class="font-serif text-xl text-charcoal-900 mb-2">High-speed Wi-Fi</h3>
-          <p class="text-sm text-charcoal-600 leading-relaxed">Fiber connectivity for work retreats and streaming comfort.</p>
+          <div class="min-w-0 flex-1">
+            <h3 class="font-serif text-xl text-charcoal-900 mb-2">High-speed Wi-Fi</h3>
+            <p class="text-sm text-charcoal-600 leading-relaxed">Fiber connectivity for work retreats and streaming comfort.</p>
+          </div>
         </div>
       </div>
 
@@ -334,8 +465,8 @@
       <article id="villa-guide" class="villa-guide mt-20 md:mt-28 reveal" data-od-id="villa-guide" aria-labelledby="villa-guide-heading">
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <header class="lg:col-span-4 lg:sticky lg:top-28">
-            <p class="text-sm font-medium uppercase tracking-[0.25em] text-sage-500 mb-4">The Villa</p>
-            <h2 id="villa-guide-heading" class="font-serif text-3xl md:text-4xl text-charcoal-900 mb-5 leading-tight">Everything you need to know</h2>
+            <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">The Villa</p>
+            <h2 id="villa-guide-heading" class="font-serif section-title text-charcoal-900 mb-5">Everything you need to know</h2>
             <p class="text-charcoal-600 leading-relaxed text-sm md:text-base">
               A private alpine sanctuary designed for slow mornings, long dinners, and nights under a quiet sky. Expand each section for full details on the home, setting, and stay.
             </p>
@@ -490,8 +621,8 @@
   <section id="gallery" class="py-24 md:py-32 px-6 bg-cream-100/50">
     <div class="mx-auto max-w-7xl">
       <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <p class="text-sm font-medium uppercase tracking-[0.25em] text-sage-500 mb-4">Gallery</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-charcoal-900 mb-6">A Glimpse Inside</h2>
+        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">Gallery</p>
+        <h2 class="font-serif section-title text-charcoal-900 mb-6">A Glimpse Inside</h2>
         <p class="text-charcoal-600 leading-relaxed">Every corner tells a story of understated elegance and natural harmony.</p>
       </div>
 
@@ -500,8 +631,8 @@
         <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-master-suite" data-caption="Master Suite" data-image="assets/images/gallery-01.jpg" data-placeholder="from-sage-200 to-sage-300" aria-label="View Master Suite">
           <img src="assets/images/gallery-01.jpg" alt="Master Suite" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Master Suite</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Master Suite</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -509,8 +640,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-dining-room" data-caption="Dining Room" data-image="assets/images/gallery-02.jpg" data-placeholder="from-timber-200 to-timber-300" aria-label="View Dining Room">
           <img src="assets/images/gallery-02.jpg" alt="Dining Room" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-charcoal-800/80">Dining Room</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Dining Room</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -518,8 +649,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-outdoor-terrace" data-caption="Outdoor Terrace" data-image="assets/images/gallery-03.jpg" data-placeholder="from-cream-200 to-sage-100" aria-label="View Outdoor Terrace">
           <img src="assets/images/gallery-03.jpg" alt="Outdoor Terrace" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-charcoal-800/80">Outdoor Terrace</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Outdoor Terrace</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -527,8 +658,8 @@
         <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-spa-bathroom" data-caption="Spa Bathroom" data-image="assets/images/gallery-04.jpg" data-placeholder="from-sage-100 to-timber-100" aria-label="View Spa Bathroom">
           <img src="assets/images/gallery-04.jpg" alt="Spa Bathroom" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-charcoal-800/80">Spa Bathroom</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Spa Bathroom</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -536,8 +667,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-forest-trail" data-caption="Forest Trail" data-image="assets/images/gallery-05.jpg" data-placeholder="from-timber-100 to-sage-200" aria-label="View Forest Trail">
           <img src="assets/images/gallery-05.jpg" alt="Forest Trail" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Forest Trail</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Forest Trail</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -545,8 +676,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[16/11] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-sunset-view" data-caption="Sunset View" data-image="assets/images/gallery-06.jpg" data-placeholder="from-sage-300 to-charcoal-700" aria-label="View Sunset View">
           <img src="assets/images/gallery-06.jpg" alt="Sunset View" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Sunset View</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Sunset View</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -554,8 +685,8 @@
         <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-private-jacuzzi" data-caption="Private Jacuzzi" data-image="assets/images/gallery-07.jpg" aria-label="View Private Jacuzzi">
           <img src="assets/images/gallery-07.jpg" alt="Private Jacuzzi" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Private Jacuzzi</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Private Jacuzzi</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -563,8 +694,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-gourmet-kitchen" data-caption="Gourmet Kitchen" data-image="assets/images/gallery-08.jpg" aria-label="View Gourmet Kitchen">
           <img src="assets/images/gallery-08.jpg" alt="Gourmet Kitchen" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-charcoal-800/80">Gourmet Kitchen</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Gourmet Kitchen</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -572,8 +703,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[4/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-stone-fireplace" data-caption="Stone Fireplace" data-image="assets/images/gallery-09.jpg" aria-label="View Stone Fireplace">
           <img src="assets/images/gallery-09.jpg" alt="Stone Fireplace" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Stone Fireplace</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Stone Fireplace</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -581,8 +712,8 @@
         <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-guest-bedroom" data-caption="Guest Bedroom" data-image="assets/images/gallery-10.jpg" aria-label="View Guest Bedroom">
           <img src="assets/images/gallery-10.jpg" alt="Guest Bedroom" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Guest Bedroom</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Guest Bedroom</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -590,8 +721,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-alpine-lake" data-caption="Alpine Lake" data-image="assets/images/gallery-11.jpg" aria-label="View Alpine Lake">
           <img src="assets/images/gallery-11.jpg" alt="Alpine Lake" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Alpine Lake</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Alpine Lake</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -599,8 +730,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-cedar-deck" data-caption="Cedar Deck" data-image="assets/images/gallery-12.jpg" aria-label="View Cedar Deck">
           <img src="assets/images/gallery-12.jpg" alt="Cedar Deck" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-charcoal-800/80">Cedar Deck</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Cedar Deck</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -608,8 +739,8 @@
         <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[16/11] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-wine-lounge" data-caption="Wine Lounge" data-image="assets/images/gallery-13.jpg" aria-label="View Wine Lounge">
           <img src="assets/images/gallery-13.jpg" alt="Wine Lounge" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Wine Lounge</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Wine Lounge</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -617,8 +748,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-wellness-spa" data-caption="Wellness Spa" data-image="assets/images/gallery-14.jpg" aria-label="View Wellness Spa">
           <img src="assets/images/gallery-14.jpg" alt="Wellness Spa" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-charcoal-800/80">Wellness Spa</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Wellness Spa</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -626,8 +757,8 @@
         <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[16/9] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-aerial-vista" data-caption="Aerial Vista" data-image="assets/images/gallery-15.jpg" aria-label="View Aerial Vista">
           <img src="assets/images/gallery-15.jpg" alt="Aerial Vista" class="absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="absolute bottom-4 left-4 text-xs font-medium uppercase tracking-wider text-cream-50/90">Aerial Vista</span>
-          <span class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Aerial Vista</span>
+          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
           </span>
         </button>
@@ -639,14 +770,14 @@
   <div id="gallery-lightbox" data-od-id="gallery-lightbox" class="fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Gallery viewer">
     <div id="lightbox-backdrop" class="absolute inset-0 bg-charcoal-900/85 backdrop-blur-md"></div>
 
-    <button type="button" id="lightbox-close" data-od-id="lightbox-close" class="absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Close gallery">
+    <button type="button" id="lightbox-close" data-od-id="lightbox-close" class="btn-interactive absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Close gallery">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
 
-    <button type="button" id="lightbox-prev" data-od-id="lightbox-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Previous image">
+    <button type="button" id="lightbox-prev" data-od-id="lightbox-prev" class="btn-interactive absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Previous image">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
     </button>
-    <button type="button" id="lightbox-next" data-od-id="lightbox-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Next image">
+    <button type="button" id="lightbox-next" data-od-id="lightbox-next" class="btn-interactive absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Next image">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
     </button>
 
@@ -656,7 +787,7 @@
 
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
       <p id="lightbox-caption" class="font-serif text-xl md:text-2xl text-cream-50 mb-2"></p>
-      <p id="lightbox-counter" class="text-xs font-medium uppercase tracking-[0.25em] text-cream-50/60"></p>
+      <p id="lightbox-counter" class="text-xs font-medium uppercase eyebrow text-cream-50/60"></p>
     </div>
   </div>
 
@@ -664,15 +795,15 @@
   <section id="pricing" class="py-24 md:py-32 px-6">
     <div class="mx-auto max-w-7xl">
       <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <p class="text-sm font-medium uppercase tracking-[0.25em] text-sage-500 mb-4">Rates</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-charcoal-900 mb-6">Stay Packages</h2>
+        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">Rates</p>
+        <h2 class="font-serif section-title text-charcoal-900 mb-6">Stay Packages</h2>
         <p class="text-charcoal-600 leading-relaxed">Transparent pricing for every kind of mountain escape.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Weekend Rate -->
         <div class="reveal reveal-delay-1 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col">
-          <p class="text-sm font-medium uppercase tracking-wider text-sage-500 mb-2">Weekend Rate</p>
+          <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2">Weekend Rate</p>
           <div class="mb-6">
             <span class="font-serif text-5xl text-charcoal-900">$450</span>
             <span class="text-charcoal-500 text-sm"> / night</span>
@@ -683,13 +814,13 @@
             <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Late checkout (2 PM)</li>
             <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Housekeeping included</li>
           </ul>
-          <a href="#contact" class="block text-center rounded-full border border-sage-300 px-6 py-3 text-sm font-medium text-sage-700 hover:bg-sage-50 transition-colors">Check Availability</a>
+          <a href="#contact" class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors">Check Availability</a>
         </div>
 
         <!-- Weekly Stay (featured) -->
         <div class="reveal reveal-delay-2 rounded-2xl border-2 border-sage-400 bg-sage-50/50 p-8 md:p-10 flex flex-col relative shadow-xl shadow-sage-100/60">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sage-500 text-cream-50 text-xs font-medium uppercase tracking-wider px-4 py-1 rounded-full">Most Popular</span>
-          <p class="text-sm font-medium uppercase tracking-wider text-sage-600 mb-2">Weekly Stay</p>
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sage-500 text-cream-50 text-xs font-medium uppercase eyebrow px-4 py-1 rounded-full whitespace-nowrap">Most Popular</span>
+          <p class="text-sm font-medium uppercase eyebrow text-sage-600 mb-2">Weekly Stay</p>
           <div class="mb-6">
             <span class="font-serif text-5xl text-charcoal-900">$380</span>
             <span class="text-charcoal-500 text-sm"> / night</span>
@@ -701,12 +832,12 @@
             <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> All amenities included</li>
             <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Flexible check-in</li>
           </ul>
-          <a href="#contact" class="block text-center rounded-full bg-sage-600 px-6 py-3 text-sm font-medium text-cream-50 hover:bg-sage-700 transition-colors">Check Availability</a>
+          <a href="#contact" class="btn-interactive block text-center rounded-full bg-sage-600 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-cream-50 hover:bg-sage-700 transition-colors">Check Availability</a>
         </div>
 
         <!-- Season Packages -->
         <div class="reveal reveal-delay-3 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col">
-          <p class="text-sm font-medium uppercase tracking-wider text-sage-500 mb-2">Season Packages</p>
+          <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2">Season Packages</p>
           <div class="mb-6">
             <span class="font-serif text-5xl text-charcoal-900">$320</span>
             <span class="text-charcoal-500 text-sm"> / night</span>
@@ -717,7 +848,7 @@
             <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Spa treatment credit ($150)</li>
             <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Airport transfer included</li>
           </ul>
-          <a href="#contact" class="block text-center rounded-full border border-sage-300 px-6 py-3 text-sm font-medium text-sage-700 hover:bg-sage-50 transition-colors">Check Availability</a>
+          <a href="#contact" class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors">Check Availability</a>
         </div>
       </div>
     </div>
@@ -727,20 +858,20 @@
   <section id="contact" class="py-24 md:py-32 px-6 bg-cream-100/50">
     <div class="mx-auto max-w-7xl">
       <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-        <p class="text-sm font-medium uppercase tracking-[0.25em] text-sage-500 mb-4">Contact</p>
-        <h2 class="font-serif text-4xl md:text-5xl text-charcoal-900 mb-6">Reserve Your Escape</h2>
+        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">Contact</p>
+        <h2 class="font-serif section-title text-charcoal-900 mb-6">Reserve Your Escape</h2>
         <p class="text-charcoal-600 leading-relaxed">Call us to check availability and book your stay.</p>
       </div>
 
       <div class="max-w-3xl mx-auto reveal">
         <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
-          <a href="tel:+19705550123" data-od-id="contact-phone-reservations" class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all">
-            <p class="text-xs font-medium uppercase tracking-[0.2em] text-sage-500 mb-3">Reservations</p>
+          <a href="tel:+19705550123" data-od-id="contact-phone-reservations" class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all focus-visible:border-sage-400">
+            <p class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3">Reservations</p>
             <!-- REPLACE: your reservations phone number below -->
             <p class="font-serif text-2xl md:text-3xl text-charcoal-900 group-hover:text-sage-700 transition-colors">+1 (970) 555-0123</p>
           </a>
-          <a href="tel:+19705550456" data-od-id="contact-phone-concierge" class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all">
-            <p class="text-xs font-medium uppercase tracking-[0.2em] text-sage-500 mb-3">Concierge</p>
+          <a href="tel:+19705550456" data-od-id="contact-phone-concierge" class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all focus-visible:border-sage-400">
+            <p class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3">Concierge</p>
             <!-- REPLACE: your concierge phone number below -->
             <p class="font-serif text-2xl md:text-3xl text-charcoal-900 group-hover:text-sage-700 transition-colors">+1 (970) 555-0456</p>
           </a>
@@ -749,6 +880,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="py-12 px-6 border-t border-cream-200">
@@ -774,14 +907,14 @@
 
       function goTo(index) {
         slides[current].classList.remove('active');
-        dots[current].classList.remove('scale-125', 'bg-cream-50');
-        dots[current].classList.add('bg-cream-50/50');
+        dots[current].classList.remove('is-active');
+        dots[current].setAttribute('aria-selected', 'false');
 
         current = (index + slides.length) % slides.length;
 
         slides[current].classList.add('active');
-        dots[current].classList.add('scale-125', 'bg-cream-50');
-        dots[current].classList.remove('bg-cream-50/50');
+        dots[current].classList.add('is-active');
+        dots[current].setAttribute('aria-selected', 'true');
       }
 
       function next() { goTo(current + 1); }
@@ -789,6 +922,7 @@
 
       function startAutoplay() {
         clearInterval(autoplayTimer);
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         autoplayTimer = setInterval(next, INTERVAL);
       }
 
@@ -829,10 +963,32 @@
     (function initMobileMenu() {
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
-      btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      function setOpen(open) {
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      btn.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
       document.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => menu.classList.add('hidden'));
+        link.addEventListener('click', () => setOpen(false));
       });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) setOpen(false);
+      });
+    })();
+
+    /* -------------------------------------------------------
+       HEADER — subtle shadow on scroll
+       ------------------------------------------------------- */
+    (function initHeaderScroll() {
+      const bar = document.getElementById('header-bar');
+      if (!bar) return;
+      const onScroll = () => {
+        bar.classList.toggle('shadow-md', window.scrollY > 24);
+        bar.classList.toggle('shadow-sm', window.scrollY <= 24);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
     })();
 
     /* -------------------------------------------------------
@@ -870,6 +1026,29 @@
       let current = 0;
       let touchStartX = 0;
       let touchStartY = 0;
+      let lastFocused = null;
+
+      const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+      function getFocusable() {
+        return Array.from(lightbox.querySelectorAll(focusableSelector))
+          .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+      }
+
+      function trapFocus(e) {
+        if (!lightbox.classList.contains('is-open') || e.key !== 'Tab') return;
+        const focusable = getFocusable();
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
 
       function paint() {
         slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
@@ -880,17 +1059,21 @@
       function open(index) {
         current = (index + items.length) % items.length;
         paint();
+        lastFocused = document.activeElement;
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.classList.add('lightbox-open');
         closeBtn.focus();
+        document.addEventListener('keydown', trapFocus);
       }
 
       function close() {
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('lightbox-open');
-        if (items[current]) items[current].focus();
+        document.removeEventListener('keydown', trapFocus);
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        else if (items[current]) items[current].focus();
       }
 
       function go(delta) {
