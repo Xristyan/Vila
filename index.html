@@ -1,1128 +1,2318 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mountain Villa — Luxury Mountain Retreat</title>
-  <meta name="description" content="Mountain Villa is a private luxury mountain retreat with panoramic alpine views, stone fireplace, outdoor jacuzzi, and designer interiors. Book a serene weekend or weekly stay in the Rockies." />
-  <meta name="keywords" content="mountain villa rental, luxury mountain retreat, alpine vacation home, private jacuzzi, mountain view lodge, Colorado retreat" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Mountain Villa",
-    "description": "A private luxury mountain retreat with panoramic alpine views, contemporary design, and premium amenities for restful getaways.",
-    "url": "https://example.com",
-    "telephone": "+1-800-555-0142",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "REPLACE: 1234 Alpine Ridge Road",
-      "addressLocality": "REPLACE: Aspen",
-      "addressRegion": "REPLACE: CO",
-      "postalCode": "REPLACE: 81611",
-      "addressCountry": "US"
-    },
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "Mountain View", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Fireplace", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Hot Tub", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
-    ]
-  }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            sage: { 50: '#f4f6f2', 100: '#e4e9df', 200: '#c8d4be', 300: '#a8b99a', 400: '#8a9d7a', 500: '#6d8260', 600: '#566a4c', 700: '#44533d', 800: '#384433', 900: '#2f392c' },
-            cream: { 50: '#fdfcfa', 100: '#f9f6f0', 200: '#f3ede2', 300: '#e8dfd0' },
-            timber: { 100: '#f0ebe4', 200: '#e0d5c8', 300: '#c9b9a5', 400: '#b09a82' },
-            charcoal: { 600: '#4a4a48', 700: '#3d3d3b', 800: '#2e2e2c', 900: '#1f1f1e' },
+<html lang="bg" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Къщи за гости край язовир Сопот</title>
+    <meta
+      name="description"
+      content="Къща за гости в с. Голяма Желязна, край язовир Сопот. Уединение сред гора, гледка към водата, камина и външно джакузи. Резервирайте уикенд."
+    />
+    <meta
+      name="keywords"
+      content="къща за гости язовир Сопот, Голяма Желязна, вила край язовир Сопот, наем къща за гости Троян, почивка язовир Сопот, къща с джакузи край язовир"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Къща за гости край язовир Сопот",
+        "description": "Къща за гости в с. Голяма Желязна, община Троян — край язовир Сопот, сред гора, за спокоен престой.",
+        "url": "https://www.villa-sopot.com",
+        "telephone": "+359888003702",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "с. Голяма Желязна",
+          "addressLocality": "Община Троян",
+          "addressRegion": "Ловеч",
+          "addressCountry": "BG"
+        },
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Гледка към язовира",
+            "value": true
           },
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Камина",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Джакузи",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Wi-Fi",
+            "value": true
+          }
+        ]
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sage: {
+                50: "#f4f6f2",
+                100: "#e4e9df",
+                200: "#c8d4be",
+                300: "#a8b99a",
+                400: "#8a9d7a",
+                500: "#6d8260",
+                600: "#566a4c",
+                700: "#44533d",
+                800: "#384433",
+                900: "#2f392c",
+              },
+              cream: {
+                50: "#fdfcfa",
+                100: "#f9f6f0",
+                200: "#f3ede2",
+                300: "#e8dfd0",
+              },
+              timber: {
+                100: "#f0ebe4",
+                200: "#e0d5c8",
+                300: "#c9b9a5",
+                400: "#b09a82",
+              },
+              charcoal: {
+                600: "#4a4a48",
+                700: "#3d3d3b",
+                800: "#2e2e2c",
+                900: "#1f1f1e",
+              },
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "Georgia", "serif"],
+              sans: ['"DM Sans"', "system-ui", "sans-serif"],
+            },
           },
         },
-      },
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <style>
-    /* Cross-fade carousel */
-    .carousel-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-      pointer-events: none;
-    }
-    .carousel-slide.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Cross-fade carousel */
+      .carousel-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+        pointer-events: none;
+      }
+      .carousel-slide.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-    /* Scroll-reveal animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+      /* Scroll-reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
 
-    /* Gallery masonry + hover zoom */
-    #gallery-grid {
-      columns: 2;
-      column-gap: 3px;
-    }
-    @media (min-width: 768px) {
+      /* Gallery masonry + hover zoom */
       #gallery-grid {
-        columns: 3;
+        columns: 2;
         column-gap: 3px;
       }
-    }
-    #gallery-grid .gallery-item {
-      break-inside: avoid;
-      margin-bottom: 3px;
-      display: block;
-      width: 100%;
-    }
-    @media (min-width: 768px) {
+      @media (min-width: 768px) {
+        #gallery-grid {
+          columns: 3;
+          column-gap: 3px;
+        }
+      }
       #gallery-grid .gallery-item {
+        break-inside: avoid;
         margin-bottom: 3px;
+        display: block;
+        width: 100%;
       }
-    }
-    .gallery-item img,
-    .gallery-item .placeholder-bg {
-      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    .gallery-item::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(31, 31, 30, 0.42) 0%, transparent 45%);
-      pointer-events: none;
-    }
-    .gallery-item:hover img,
-    .gallery-item:hover .placeholder-bg {
-      transform: scale(1.06);
-    }
-
-    /* Gallery lightbox */
-    #gallery-lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.35s ease, visibility 0.35s ease;
-    }
-    #gallery-lightbox.is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    .lightbox-slide {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5rem 4.5rem 6rem;
-      opacity: 0;
-      transition: opacity 0.45s ease-in-out;
-      pointer-events: none;
-    }
-    .lightbox-slide.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* Villa guide accordion — SEO content block */
-    .villa-guide details {
-      border-bottom: 1px solid #e4e9df;
-    }
-    .villa-guide details:last-child {
-      border-bottom: 0;
-    }
-    .villa-guide summary {
-      list-style: none;
-      cursor: pointer;
-      border-radius: 0.25rem;
-    }
-    .villa-guide summary:focus-visible {
-      outline: 2px solid #6d8260;
-      outline-offset: 2px;
-    }
-    .villa-guide summary::-webkit-details-marker {
-      display: none;
-    }
-    .villa-guide summary::after {
-      content: '+';
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: #6d8260;
-      transition: transform 0.25s ease;
-    }
-    .villa-guide details[open] summary::after {
-      transform: rotate(45deg);
-    }
-    .lightbox-slide img,
-    .lightbox-slide .lightbox-placeholder {
-      max-width: min(1200px, 92vw);
-      max-height: min(78vh, 900px);
-      width: auto;
-      height: auto;
-      border-radius: 0.75rem;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-      object-fit: contain;
-    }
-    .lightbox-slide .lightbox-placeholder {
-      width: min(1200px, 92vw);
-      height: min(78vh, 900px);
-    }
-    body.lightbox-open {
-      overflow: hidden;
-    }
-
-    /* Anchor offset for fixed header */
-    html {
-      scroll-padding-top: 6.5rem;
-    }
-
-    /* Focus — keyboard only, brand-aligned */
-    :focus { outline: none; }
-    :focus-visible {
-      outline: 2px solid #6d8260;
-      outline-offset: 3px;
-    }
-
-    /* Display & heading tracking */
-    .hero-title {
-      letter-spacing: -0.025em;
-      font-size: clamp(2.75rem, 7vw, 5.5rem);
-      line-height: 1.05;
-    }
-    .section-title {
-      letter-spacing: -0.015em;
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      line-height: 1.1;
-    }
-    .eyebrow {
-      letter-spacing: 0.08em;
-    }
-    .btn-label {
-      letter-spacing: 0.02em;
-    }
-
-    /* Skip link */
-    .skip-link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 200;
-      padding: 0.75rem 1.25rem;
-      background: #566a4c;
-      color: #fdfcfa;
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      transform: translateY(-120%);
-      transition: transform 0.15s ease;
-    }
-    .skip-link:focus-visible {
-      transform: translateY(0);
-    }
-
-    /* Carousel dot — 44px touch target */
-    .carousel-dot {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 2.75rem;
-      min-height: 2.75rem;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-    }
-    .carousel-dot-inner {
-      display: block;
-      width: 0.625rem;
-      height: 0.625rem;
-      border-radius: 9999px;
-      background: rgba(253, 252, 250, 0.5);
-      transition: transform 0.15s ease, background-color 0.15s ease;
-    }
-    .carousel-dot:hover .carousel-dot-inner,
-    .carousel-dot:focus-visible .carousel-dot-inner {
-      background: rgba(253, 252, 250, 0.8);
-    }
-    .carousel-dot.is-active .carousel-dot-inner {
-      transform: scale(1.25);
-      background: #fdfcfa;
-    }
-
-    /* Button press feedback */
-    .btn-interactive:active:not(:disabled) {
-      transform: scale(0.98);
-    }
-
-    /* Gallery caption legibility */
-    .gallery-label {
-      text-shadow: 0 1px 10px rgba(31, 31, 30, 0.55);
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
+      @media (min-width: 768px) {
+        #gallery-grid .gallery-item {
+          margin-bottom: 3px;
+        }
       }
-      .carousel-slide { transition: none; }
       .gallery-item img,
-      .gallery-item .placeholder-bg { transition: none; }
+      .gallery-item video,
+      .gallery-item .placeholder-bg {
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .gallery-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(31, 31, 30, 0.42) 0%,
+          transparent 45%
+        );
+        pointer-events: none;
+      }
       .gallery-item:hover img,
-      .gallery-item:hover .placeholder-bg { transform: none; }
-      #gallery-lightbox { transition: none; }
-      .lightbox-slide { transition: none; }
-      .btn-interactive:active:not(:disabled) { transform: none; }
-      .skip-link { transition: none; }
-    }
-  </style>
-</head>
-<body class="font-sans text-charcoal-800 bg-cream-50 antialiased">
+      .gallery-item:hover video,
+      .gallery-item:hover .placeholder-bg {
+        transform: scale(1.06);
+      }
 
-  <a href="#main" class="skip-link">Skip to content</a>
+      /* Gallery lightbox */
+      #gallery-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+      }
+      #gallery-lightbox.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .lightbox-slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 4.5rem 6rem;
+        opacity: 0;
+        transition: opacity 0.45s ease-in-out;
+        pointer-events: none;
+      }
+      .lightbox-slide.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-  <!-- ========== STICKY HEADER ========== -->
-  <header id="header" data-od-id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
-    <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Main navigation">
-      <div id="header-bar" class="mt-4 flex items-center justify-between rounded-2xl bg-cream-50/70 px-6 py-4 shadow-sm backdrop-blur-md border border-cream-200/60 transition-shadow duration-300">
-        <a href="#hero" data-od-id="site-logo" class="font-serif text-2xl font-semibold tracking-tight text-charcoal-900">
-          Mountain Villa
-        </a>
-        <ul class="hidden md:flex items-center gap-8 text-sm font-medium btn-label text-charcoal-700">
-          <li><a href="#about" class="rounded-sm py-1 hover:text-sage-600 transition-colors">About</a></li>
-          <li><a href="#gallery" class="rounded-sm py-1 hover:text-sage-600 transition-colors">Gallery</a></li>
-          <li><a href="#pricing" class="rounded-sm py-1 hover:text-sage-600 transition-colors">Pricing</a></li>
-          <li><a href="#contact" class="rounded-sm py-1 hover:text-sage-600 transition-colors">Contact</a></li>
-        </ul>
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-lg text-charcoal-700 hover:bg-cream-200/60 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      /* Villa guide accordion — SEO content block */
+      .villa-guide details {
+        border-bottom: 1px solid #e4e9df;
+      }
+      .villa-guide details:last-child {
+        border-bottom: 0;
+      }
+      .villa-guide summary {
+        list-style: none;
+        cursor: pointer;
+        border-radius: 0.25rem;
+      }
+      .villa-guide summary:focus-visible {
+        outline: 2px solid #6d8260;
+        outline-offset: 2px;
+      }
+      .villa-guide summary::-webkit-details-marker {
+        display: none;
+      }
+      .villa-guide summary::after {
+        content: "+";
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: #6d8260;
+        transition: transform 0.25s ease;
+      }
+      .villa-guide details[open] summary::after {
+        transform: rotate(45deg);
+      }
+      .lightbox-slide img,
+      .lightbox-slide video,
+      .lightbox-slide .lightbox-placeholder {
+        max-width: min(1200px, 92vw);
+        max-height: min(78vh, 900px);
+        width: auto;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+        object-fit: contain;
+      }
+      .lightbox-slide .lightbox-placeholder {
+        width: min(1200px, 92vw);
+        height: min(78vh, 900px);
+      }
+      body.lightbox-open {
+        overflow: hidden;
+      }
+
+      /* Anchor offset for fixed header */
+      html {
+        scroll-padding-top: 6.5rem;
+      }
+
+      /* Focus — keyboard only, brand-aligned */
+      :focus {
+        outline: none;
+      }
+      :focus-visible {
+        outline: 2px solid #6d8260;
+        outline-offset: 3px;
+      }
+
+      /* Display & heading tracking */
+      .hero-title {
+        letter-spacing: -0.025em;
+        font-size: clamp(2.75rem, 7vw, 5.5rem);
+        line-height: 1.05;
+      }
+      .section-title {
+        letter-spacing: -0.015em;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        line-height: 1.1;
+      }
+      .eyebrow {
+        letter-spacing: 0.08em;
+      }
+      .btn-label {
+        letter-spacing: 0.02em;
+      }
+
+      /* Skip link */
+      .skip-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        padding: 0.75rem 1.25rem;
+        background: #566a4c;
+        color: #fdfcfa;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        transform: translateY(-120%);
+        transition: transform 0.15s ease;
+      }
+      .skip-link:focus-visible {
+        transform: translateY(0);
+      }
+
+      /* Carousel dot — 44px touch target */
+      .carousel-dot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.75rem;
+        min-height: 2.75rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+      .carousel-dot-inner {
+        display: block;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-radius: 9999px;
+        background: rgba(253, 252, 250, 0.5);
+        transition: transform 0.15s ease, background-color 0.15s ease;
+      }
+      .carousel-dot:hover .carousel-dot-inner,
+      .carousel-dot:focus-visible .carousel-dot-inner {
+        background: rgba(253, 252, 250, 0.8);
+      }
+      .carousel-dot.is-active .carousel-dot-inner {
+        transform: scale(1.25);
+        background: #fdfcfa;
+      }
+
+      /* Button press feedback */
+      .btn-interactive:active:not(:disabled) {
+        transform: scale(0.98);
+      }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .carousel-slide {
+          transition: none;
+        }
+        .gallery-item img,
+        .gallery-item video,
+        .gallery-item .placeholder-bg {
+          transition: none;
+        }
+        .gallery-item:hover img,
+        .gallery-item:hover video,
+        .gallery-item:hover .placeholder-bg {
+          transform: none;
+        }
+        #gallery-lightbox {
+          transition: none;
+        }
+        .lightbox-slide {
+          transition: none;
+        }
+        .btn-interactive:active:not(:disabled) {
+          transform: none;
+        }
+        .skip-link {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans text-charcoal-800 bg-cream-50 antialiased">
+    <a href="#main" class="skip-link">Към съдържанието</a>
+
+    <!-- ========== STICKY HEADER ========== -->
+    <header
+      id="header"
+      data-od-id="site-header"
+      class="fixed top-0 left-0 right-0 z-50 transition-shadow duration-300"
+    >
+      <nav
+        class="mx-auto max-w-7xl px-6 lg:px-8"
+        aria-label="Основна навигация"
+      >
+        <div
+          id="header-bar"
+          class="mt-4 flex items-center justify-between rounded-2xl bg-cream-50/70 px-6 py-4 shadow-sm backdrop-blur-md border border-cream-200/60 transition-shadow duration-300"
+        >
+          <a
+            href="#hero"
+            data-od-id="site-logo"
+            class="font-serif text-2xl font-semibold tracking-tight text-charcoal-900"
+          >
+            Къща за гости
+          </a>
+          <ul
+            class="hidden md:flex items-center gap-8 text-sm font-medium btn-label text-charcoal-700"
+          >
+            <li>
+              <a
+                href="#about"
+                class="rounded-sm py-1 hover:text-sage-600 transition-colors"
+                >За нас</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="rounded-sm py-1 hover:text-sage-600 transition-colors"
+                >Галерия</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                class="rounded-sm py-1 hover:text-sage-600 transition-colors"
+                >Цени</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="rounded-sm py-1 hover:text-sage-600 transition-colors"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-lg text-charcoal-700 hover:bg-cream-200/60 transition-colors"
+            aria-label="Отвори менюто"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile nav -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-2 rounded-2xl bg-cream-50/95 backdrop-blur-md border border-cream-200/60 shadow-sm overflow-hidden"
+        >
+          <a
+            href="#about"
+            class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50"
+            >За нас</a
+          >
+          <a
+            href="#gallery"
+            class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50"
+            >Галерия</a
+          >
+          <a
+            href="#pricing"
+            class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50"
+            >Цени</a
+          >
+          <a
+            href="#contact"
+            class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50"
+            >Контакт</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ========== HERO CAROUSEL ========== -->
+      <section
+        id="hero"
+        class="relative h-screen min-h-[600px] overflow-hidden"
+        aria-label="Начало"
+      >
+        <div id="carousel" class="absolute inset-0">
+          <!-- Slide 1 — demo: Unsplash · replace with assets/images/hero-villa-exterior.jpg -->
+          <div class="carousel-slide active" data-index="0">
+            <div class="absolute inset-0">
+              <img
+                src="assets/images/hero-villa-exterior.jpg"
+                alt="Изглед към вилата"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute inset-0 bg-charcoal-900/25"></div>
+          </div>
+          <!-- Slide 2 — demo: Unsplash · replace with assets/images/hero-mountain-panorama.jpg -->
+          <div class="carousel-slide" data-index="1">
+            <div class="absolute inset-0">
+              <img
+                src="assets/images/hero-livingroom.jpg"
+                alt="Гледка към язовира"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute inset-0 bg-charcoal-900/20"></div>
+            </div>
+          </div>
+          <!-- Slide 3 — demo: Unsplash · replace with assets/images/hero-living-area.jpg -->
+          <div class="carousel-slide" data-index="2">
+            <div class="absolute inset-0">
+              <img
+                src="assets/images/gallery-07.jpg"
+                alt="Уютен хол"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute inset-0 bg-charcoal-900/15"></div>
+          </div>
+        </div>
+
+        <!-- Hero overlay content -->
+        <div
+          class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        >
+          <h1
+            class="reveal visible reveal-delay-1 font-serif hero-title font-medium text-cream-50"
+          >
+            Къща за гости
+          </h1>
+          <p
+            class="reveal visible reveal-delay-2 mt-8 md:mt-10 max-w-lg text-base md:text-lg text-cream-100/90 font-light leading-relaxed [text-shadow:0_2px_16px_rgba(31,31,30,0.5)]"
+          >
+            Едно кътче тишина и спокойствие в с. Голяма Желязна, край язовир
+            Сопот.
+          </p>
+          <a
+            href="#contact"
+            data-od-id="hero-cta"
+            class="reveal visible reveal-delay-3 mt-10 inline-flex items-center justify-center min-h-[2.75rem] rounded-full bg-cream-50/90 px-8 py-3.5 text-sm font-medium btn-label text-charcoal-800 hover:bg-cream-50 transition-colors shadow-lg"
+          >
+            Резервирайте
+          </a>
+        </div>
+
+        <!-- Carousel controls -->
+        <button
+          id="carousel-prev"
+          class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors"
+          aria-label="Предишен слайд"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
         </button>
-      </div>
-      <!-- Mobile nav -->
-      <div id="mobile-menu" class="hidden md:hidden mt-2 rounded-2xl bg-cream-50/95 backdrop-blur-md border border-cream-200/60 shadow-sm overflow-hidden">
-        <a href="#about" class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50">About</a>
-        <a href="#gallery" class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50">Gallery</a>
-        <a href="#pricing" class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50">Pricing</a>
-        <a href="#contact" class="mobile-link block px-6 py-3 text-sm font-medium text-charcoal-700 hover:bg-sage-50">Contact</a>
-      </div>
-    </nav>
-  </header>
+        <button
+          id="carousel-next"
+          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors"
+          aria-label="Следващ слайд"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
 
-  <main id="main">
+        <!-- Indicator dots -->
+        <div
+          id="carousel-dots"
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-1"
+          role="tablist"
+          aria-label="Слайдове в началото"
+        >
+          <button
+            type="button"
+            class="carousel-dot is-active -mx-3"
+            data-index="0"
+            role="tab"
+            aria-label="Слайд 1"
+            aria-selected="true"
+          >
+            <span class="carousel-dot-inner"></span>
+          </button>
+          <button
+            type="button"
+            class="carousel-dot -mx-3"
+            data-index="1"
+            role="tab"
+            aria-label="Слайд 2"
+            aria-selected="false"
+          >
+            <span class="carousel-dot-inner"></span>
+          </button>
+          <button
+            type="button"
+            class="carousel-dot -mx-3"
+            data-index="2"
+            role="tab"
+            aria-label="Слайд 3"
+            aria-selected="false"
+          >
+            <span class="carousel-dot-inner"></span>
+          </button>
+        </div>
+      </section>
 
-  <!-- ========== HERO CAROUSEL ========== -->
-  <section id="hero" class="relative h-screen min-h-[600px] overflow-hidden" aria-label="Hero">
-    <div id="carousel" class="absolute inset-0">
-      <!-- Slide 1 — demo: Unsplash · replace with assets/images/hero-villa-exterior.jpg -->
-      <div class="carousel-slide active" data-index="0">
-        <div class="absolute inset-0">
-          <img src="assets/images/hero-villa-exterior.jpg" alt="Villa Exterior View" class="w-full h-full object-cover" />
-        </div>
-        <div class="absolute inset-0 bg-charcoal-900/25"></div>
-        <div class="absolute bottom-24 left-6 md:left-8">
-          <p class="text-xs font-medium uppercase eyebrow text-cream-50/50">Villa Exterior View</p>
-        </div>
-      </div>
-      <!-- Slide 2 — demo: Unsplash · replace with assets/images/hero-mountain-panorama.jpg -->
-      <div class="carousel-slide" data-index="1">
-        <div class="absolute inset-0">
-          <img src="assets/images/hero-mountain-panorama.jpg" alt="Mountain Panorama" class="w-full h-full object-cover" />
-        </div>
-        <div class="absolute inset-0 bg-charcoal-900/20"></div>
-        <div class="absolute bottom-24 left-6 md:left-8">
-          <p class="text-xs font-medium uppercase eyebrow text-cream-50/50">Mountain Panorama</p>
-        </div>
-      </div>
-      <!-- Slide 3 — demo: Unsplash · replace with assets/images/hero-living-area.jpg -->
-      <div class="carousel-slide" data-index="2">
-        <div class="absolute inset-0">
-          <img src="assets/images/hero-living-area.jpg" alt="Cozy Living Area" class="w-full h-full object-cover" />
-        </div>
-        <div class="absolute inset-0 bg-charcoal-900/15"></div>
-        <div class="absolute bottom-24 left-6 md:left-8">
-          <p class="text-xs font-medium uppercase eyebrow text-cream-50/50">Cozy Living Area</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hero overlay content -->
-    <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-      <p class="reveal visible mb-4 text-sm font-medium uppercase eyebrow text-cream-100">Alpine Sanctuary</p>
-      <h1 class="reveal visible reveal-delay-1 font-serif hero-title font-medium text-cream-50">
-        Mountain Villa
-      </h1>
-      <p class="reveal visible reveal-delay-2 mt-8 md:mt-10 max-w-lg text-base md:text-lg text-cream-100/90 font-light leading-relaxed [text-shadow:0_2px_16px_rgba(31,31,30,0.5)]">
-        A serene escape where luxury meets the quiet beauty of the mountains.
-      </p>
-      <a href="#contact" data-od-id="hero-cta" class="reveal visible reveal-delay-3 mt-10 inline-flex items-center justify-center min-h-[2.75rem] rounded-full bg-cream-50/90 px-8 py-3.5 text-sm font-medium btn-label text-charcoal-800 hover:bg-cream-50 transition-colors shadow-lg">
-        Reserve Your Stay
-      </a>
-    </div>
-
-    <!-- Carousel controls -->
-    <button id="carousel-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors" aria-label="Previous slide">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
-    </button>
-    <button id="carousel-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors" aria-label="Next slide">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
-    </button>
-
-    <!-- Indicator dots -->
-    <div id="carousel-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-1" role="tablist" aria-label="Hero slides">
-      <button type="button" class="carousel-dot is-active -mx-3" data-index="0" role="tab" aria-label="Slide 1" aria-selected="true"><span class="carousel-dot-inner"></span></button>
-      <button type="button" class="carousel-dot -mx-3" data-index="1" role="tab" aria-label="Slide 2" aria-selected="false"><span class="carousel-dot-inner"></span></button>
-      <button type="button" class="carousel-dot -mx-3" data-index="2" role="tab" aria-label="Slide 3" aria-selected="false"><span class="carousel-dot-inner"></span></button>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT / FEATURES ========== -->
-  <section id="about" class="py-24 md:py-32 px-6">
-    <div class="mx-auto max-w-7xl">
-      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">About the Villa</p>
-        <h2 class="font-serif section-title text-charcoal-900 mb-6">Crafted for Tranquility</h2>
-        <p class="text-charcoal-600 leading-relaxed">
-          Perched above the valley with sweeping alpine views, Mountain Villa blends contemporary design with natural materials — a private haven for rest, reflection, and unforgettable moments.
-        </p>
-      </div>
-
-      <div class="flex flex-col gap-4 w-full" data-od-id="amenity-cards">
-        <!-- Mountain View -->
-        <div class="reveal reveal-delay-1 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" data-od-id="amenity-mountain-view">
-          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 20l9-12 4 6 3-4 5 10H3z"/></svg>
-          </div>
-          <div class="min-w-0 flex-1">
-            <h3 class="font-serif text-xl text-charcoal-900 mb-2">Mountain View</h3>
-            <p class="text-sm text-charcoal-600 leading-relaxed">Floor-to-ceiling windows framing panoramic peaks from every room.</p>
-          </div>
-        </div>
-        <!-- Fireplace -->
-        <div class="reveal reveal-delay-2 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" data-od-id="amenity-fireplace">
-          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
-          </div>
-          <div class="min-w-0 flex-1">
-            <h3 class="font-serif text-xl text-charcoal-900 mb-2">Fireplace</h3>
-            <p class="text-sm text-charcoal-600 leading-relaxed">A stone hearth centerpiece for cozy evenings by the fire.</p>
-          </div>
-        </div>
-        <!-- Private Jacuzzi -->
-        <div class="reveal reveal-delay-3 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" data-od-id="amenity-jacuzzi">
-          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          </div>
-          <div class="min-w-0 flex-1">
-            <h3 class="font-serif text-xl text-charcoal-900 mb-2">Private Jacuzzi</h3>
-            <p class="text-sm text-charcoal-600 leading-relaxed">Outdoor hot tub under the stars with forest privacy.</p>
-          </div>
-        </div>
-        <!-- High-speed Wi-Fi -->
-        <div class="reveal flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8" style="transition-delay: 0.4s" data-od-id="amenity-wifi">
-          <div class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.394 9.393a15 15 0 0121.212 0"/></svg>
-          </div>
-          <div class="min-w-0 flex-1">
-            <h3 class="font-serif text-xl text-charcoal-900 mb-2">High-speed Wi-Fi</h3>
-            <p class="text-sm text-charcoal-600 leading-relaxed">Fiber connectivity for work retreats and streaming comfort.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Villa guide — expandable SEO content (edit copy below) -->
-      <article id="villa-guide" class="villa-guide mt-20 md:mt-28 reveal" data-od-id="villa-guide" aria-labelledby="villa-guide-heading">
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <header class="lg:col-span-4 lg:sticky lg:top-28">
-            <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">The Villa</p>
-            <h2 id="villa-guide-heading" class="font-serif section-title text-charcoal-900 mb-5">Everything you need to know</h2>
-            <p class="text-charcoal-600 leading-relaxed text-sm md:text-base">
-              A private alpine sanctuary designed for slow mornings, long dinners, and nights under a quiet sky. Expand each section for full details on the home, setting, and stay.
+      <!-- ========== ABOUT / FEATURES ========== -->
+      <section id="about" class="py-24 md:py-32 px-6">
+        <div class="mx-auto max-w-7xl">
+          <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">
+              За вилата
             </p>
-          </header>
+            <h2 class="font-serif section-title text-charcoal-900 mb-6">
+              Създадена за спокойствие
+            </h2>
+            <p class="text-charcoal-600 leading-relaxed">
+              Къщите за гости се намират в живописното село Голяма Желязна,
+              непосредствено до язовир Сопот, само на около 1 час и 30 минути от
+              София. Те съчетават съвременен и стилен дизайн с уютна интериорна
+              и екстериорна обстановка, в която естествените материали създават
+              усещане за топлина и хармония с природата. Къщите са подходящи за
+              всеки, който търси място за пълноценен отдих и приятно прекарване.
+              Гостите могат да се насладят на спокойствие и релакс край
+              джакузито, разходки сред природата, забавления с близки и
+              приятели, както и на риболов в язовир Сопот.
+            </p>
+          </div>
 
-          <div class="lg:col-span-8 rounded-2xl border border-cream-200 bg-cream-50/60 px-6 md:px-8">
-            <details class="group py-5" open data-od-id="guide-setting">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Setting &amp; location
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  Mountain Villa sits on a forested ridge above the valley floor, with uninterrupted views of snow-capped peaks from the main living level and primary suite. The property is reached by a private paved drive, set back from the road for complete seclusion while remaining a short drive from village dining, trailheads, and seasonal recreation.
-                </p>
-                <p>
-                  <!-- REPLACE: Update address, elevation, and nearest town for your property -->
-                  <strong class="text-charcoal-800 font-medium">Address:</strong> REPLACE: 1234 Alpine Ridge Road, Aspen, CO 81611<br />
-                  <strong class="text-charcoal-800 font-medium">Elevation:</strong> REPLACE: 8,200 ft · <strong class="text-charcoal-800 font-medium">Nearest town:</strong> REPLACE: 12 min to village center
+          <div class="flex flex-col gap-4 w-full" data-od-id="amenity-cards">
+            <!-- Mountain View -->
+            <div
+              class="reveal reveal-delay-1 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8"
+              data-od-id="amenity-mountain-view"
+            >
+              <div
+                class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 20l9-12 4 6 3-4 5 10H3z"
+                  />
+                </svg>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-serif text-xl text-charcoal-900 mb-2">
+                  Гледка към язовира
+                </h3>
+                <p class="text-sm text-charcoal-600 leading-relaxed">
+                  Панорамни прозорци разкриват прекрасна гледка към язовира и
+                  заобикалящата го гора, превръщайки природата в част от
+                  преживяването във всяка стая.
                 </p>
               </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-accommodations">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Accommodations &amp; sleeping
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  The home sleeps up to <!-- REPLACE: guest count -->10 guests across <!-- REPLACE: bedroom count -->4 bedrooms and <!-- REPLACE: bathroom count -->3.5 baths. The primary suite features a king bed, soaking tub, and private balcony; two guest rooms offer queen beds; a bunk room is ideal for families. Premium linens, blackout shades, and individually controlled heating keep every room comfortable through changing mountain weather.
-                </p>
-                <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500">
-                  <li>Primary suite with ensuite &amp; balcony</li>
-                  <li>Two queen guest bedrooms</li>
-                  <li>Family bunk room (sleeps 4)</li>
-                  <li>Half bath on main level</li>
-                </ul>
+            </div>
+            <!-- Fireplace -->
+            <div
+              class="reveal reveal-delay-2 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8"
+              data-od-id="amenity-fireplace"
+            >
+              <div
+                class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+                  />
+                </svg>
               </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-living">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Indoor living spaces
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  Open-plan living flows from a double-height great room to a chef's kitchen and dining area for <!-- REPLACE: dining capacity -->12. Floor-to-ceiling glass draws the landscape inward; a floor-to-ceiling stone fireplace anchors winter evenings. A dedicated media lounge, reading nook, and mudroom with boot warmers round out the main level for gatherings that feel both spacious and intimate.
-                </p>
-                <p>
-                  Natural timber beams, plaster walls, and locally sourced stone create a calm, tactile palette — contemporary in line, warm in material. Smart lighting and motorized shades allow you to shift the mood from bright morning coffee to candlelit dinner without leaving the sofa.
-                </p>
-              </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-outdoor">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Outdoor living &amp; wellness
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  Step onto a cedar deck with lounge seating, a gas fire table, and an outdoor dining table for al fresco meals. A private jacuzzi is tucked among evergreens for stargazing in every season. In summer, landscaped paths connect to a meadow overlook; in winter, the heated driveway and entry make arrivals effortless after a day on the slopes.
-                </p>
-                <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500">
-                  <li>Heated private jacuzzi</li>
-                  <li>Wraparound deck &amp; fire table</li>
-                  <li>Outdoor dining for 8+</li>
-                  <li>BBQ grill &amp; prep station</li>
-                  <li>Heated driveway &amp; walkway</li>
-                  <li>Two-car heated garage</li>
-                </ul>
-              </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-kitchen">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Kitchen &amp; dining
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  The kitchen is fully equipped for serious cooking and effortless hosting: professional-range gas cooktop, double oven, wine refrigerator, espresso station, and a large island with bar seating. Dishwasher, microwave, and a full complement of cookware, serveware, and glassware are stocked for long stays.
-                </p>
-                <p>
-                  <!-- REPLACE: Add local provisioning or chef services if offered -->
-                  A farmhouse dining table seats <!-- REPLACE -->12 under pendant lighting; a secondary breakfast bar seats four. We can arrange grocery delivery or private chef service on request — ask our concierge when you call to book.
+              <div class="min-w-0 flex-1">
+                <h3 class="font-serif text-xl text-charcoal-900 mb-2">
+                  Камина
+                </h3>
+                <p class="text-sm text-charcoal-600 leading-relaxed">
+                  Каменно огнище, което създава топла и уютна атмосфера за
+                  незабравими вечери край огъня, споделени с близки и приятели.
                 </p>
               </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-included">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                What's included in your stay
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>Every reservation includes the essentials for a turnkey mountain escape — arrive, unwind, and let the setting do the rest.</p>
-                <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500">
-                  <li>High-speed fiber Wi-Fi</li>
-                  <li>Central heating &amp; fireplace wood</li>
-                  <li>Luxury linens &amp; towels</li>
-                  <li>Starter toiletries &amp; paper goods</li>
-                  <li>Washer &amp; dryer</li>
-                  <li>Smart TV &amp; streaming-ready</li>
-                  <li>Private jacuzzi &amp; outdoor fire</li>
-                  <li>Concierge for local recommendations</li>
-                </ul>
+            </div>
+            <!-- Private Jacuzzi -->
+            <div
+              class="reveal reveal-delay-3 flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8"
+              data-od-id="amenity-jacuzzi"
+            >
+              <div
+                class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
               </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-experiences">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Nearby experiences &amp; seasons
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  <!-- REPLACE: Tailor activities to your region -->
-                  <strong class="text-charcoal-800 font-medium">Winter:</strong> World-class skiing and snowboarding within 25 minutes; snowshoeing and cross-country trails from the property boundary; après-ski dining in the village.
-                </p>
-                <p>
-                  <strong class="text-charcoal-800 font-medium">Summer &amp; fall:</strong> Hiking, mountain biking, fly fishing, and scenic drives through golden aspen groves. Farmers markets, art galleries, and farm-to-table restaurants make longer stays easy to fill.
-                </p>
-                <p>
-                  <strong class="text-charcoal-800 font-medium">Year-round:</strong> Hot springs, wellness spas, guided wildlife tours, and stargazing from the deck — Mountain Villa is a base camp for both adventure and deep rest.
+              <div class="min-w-0 flex-1">
+                <h3 class="font-serif text-xl text-charcoal-900 mb-2">
+                  Частно джакузи
+                </h3>
+                <p class="text-sm text-charcoal-600 leading-relaxed">
+                  Външно джакузи, където можете да се отпуснете под звездите и
+                  да се насладите на тишината и спокойствието на природата.
                 </p>
               </div>
-            </details>
-
-            <details class="group py-5" data-od-id="guide-practical">
-              <summary class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900">
-                Practical information
-              </summary>
-              <div class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8">
-                <p>
-                  <strong class="text-charcoal-800 font-medium">Check-in / check-out:</strong> REPLACE: 4:00 PM arrival · 11:00 AM departure. Self check-in with smart lock; detailed directions sent before your stay.
-                </p>
-                <p>
-                  <strong class="text-charcoal-800 font-medium">Parking:</strong> Two vehicles in the heated garage; additional paved spaces in the driveway.
-                </p>
-                <p>
-                  <!-- REPLACE: Update policies to match your property -->
-                  <strong class="text-charcoal-800 font-medium">House policies:</strong> No smoking indoors. Quiet hours after 10 PM. Pets considered on request. Maximum occupancy as listed; events require prior approval.
-                </p>
-                <p>
-                  Questions before you book? Call our reservations line in the <a href="#contact" class="text-sage-600 underline underline-offset-2 hover:text-sage-700 transition-colors">contact section</a> — we are happy to help you plan dates, group size, and special requests.
+            </div>
+            <!-- High-speed Wi-Fi -->
+            <div
+              class="reveal flex w-full items-start gap-5 md:gap-6 rounded-2xl bg-cream-100/80 border border-cream-200 p-6 md:p-8"
+              style="transition-delay: 0.4s"
+              data-od-id="amenity-wifi"
+            >
+              <div
+                class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-sage-100 text-sage-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.394 9.393a15 15 0 0121.212 0"
+                  />
+                </svg>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-serif text-xl text-charcoal-900 mb-2">
+                  Високоскоростен Wi-Fi
+                </h3>
+                <p class="text-sm text-charcoal-600 leading-relaxed">
+                  Останете свързани с всичко важно, дори когато сте далеч от
+                  града — бърза и надеждна връзка за спокойна работа от
+                  разстояние, филми и уютни вечери сред природата.
                 </p>
               </div>
-            </details>
+            </div>
+          </div>
+
+          <!-- Villa guide — expandable SEO content (edit copy below) -->
+          <article
+            id="villa-guide"
+            class="villa-guide mt-20 md:mt-28 reveal"
+            data-od-id="villa-guide"
+            aria-labelledby="villa-guide-heading"
+          >
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <header class="lg:col-span-4 lg:sticky lg:top-28">
+                <p
+                  class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4"
+                >
+                  Вилата
+                </p>
+                <h2
+                  id="villa-guide-heading"
+                  class="font-serif section-title text-charcoal-900 mb-5"
+                >
+                  Всичко, което трябва да знаете
+                </h2>
+              </header>
+
+              <div
+                class="lg:col-span-8 rounded-2xl border border-cream-200 bg-cream-50/60 px-6 md:px-8"
+              >
+                <details class="group py-5" open data-od-id="guide-setting">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                    Местоположение и обстановка
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      Къщата за гости се намира в живописното село Голяма
+                      Желязна, община Троян, област Ловеч — в непосредствена
+                      близост до язовир Сопот и заобиколена от спокойствието на
+                      гората.
+                    </p>
+                    <div
+                      class="mt-4 w-full overflow-hidden rounded-xl border border-cream-200 aspect-[4/3] md:aspect-[16/10]"
+                    >
+                      <iframe
+                        title="Местоположение на къщата за гости в с. Голяма Желязна"
+                        src="https://maps.google.com/maps?q=42.99318664493736,24.4613564223812&amp;z=16&amp;hl=bg&amp;output=embed"
+                        class="h-full w-full"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                      ></iframe>
+                    </div>
+                    <strong class="text-charcoal-800 font-medium"
+                    >Разстояние от София:</strong
+                  >
+                  около 130 км
+                </p>
+                  </div>
+                </details>
+
+                <details class="group py-5" data-od-id="guide-accommodations">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                    Спални
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      Домът предлага комфортно настаняване за до 10 гости, разпределени в 4 уютни спални и 5 бани. Всяка спалня разполага със собствена баня и тераса, осигурявайки необходимото лично пространство и спокойствие за всеки гост.
+                      <br>
+                      <br>
+                      Всички спални са оборудвани с удобно двойно легло, гардероб, скрин с огледало и затъмняващи завеси за пълноценна почивка. В две от спалните е предвидено и допълнително разтегателно легло, подходящо за настаняване на още гости.
+                      <br>
+                      <br>
+                    </p>
+                    <ul
+                      class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
+                    >
+                      <li>
+                        4 спални с двойни легла
+                      </li>
+                      <li>Собствена баня към всяка спалня</li>
+                      <li>Собствена тераса към всяка спалня</li>
+                      <li>2 спални с допълнително разтегателно легло</li>
+                      <li>Гардероб и скрин с огледало</li>
+                      <li>Затъмняващи завеси за спокоен сън</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="group py-5" data-od-id="guide-outdoor">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                  Дневна
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      Просторно и светло помещение, създадено за споделени моменти, събирания и дълги вечери с близки и приятели. Панорамните прозорци обгръщат пространството и разкриват прекрасна гледка към язовира и гората, превръщайки природата в част от атмосферата.
+
+                      Уютна камина допълва усещането за топлина и комфорт, а телевизорът и климатикът осигуряват всичко необходимо за приятно прекарване по всяко време на годината. Пространството е достатъчно голямо, за да събере всички гости и да се превърне в естествения център на дома — място за разговори, смях и незабравими вечери.
+                    </p>
+                    <ul
+                      class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
+                    >
+                      <li>Отопляемо частно джакузи</li>
+                      <li>Панорамни прозорци към язовира и гората</li>
+                      <li>Камина за уютни вечери</li>
+                      <li>Телевизор и климатик</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="group py-5" data-od-id="guide-kitchen">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                    Кухня
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      Модерна и просторна кухня, в която ще откриете всичко необходимо за приготвянето на вкусни ястия и приятни моменти около трапезата. Разполага с фурна, котлони, микроволновка, хладилници, машина за лед, пълен набор от прибори и кухненска посуда, както и всичко необходимо за комфортното пребиваване на голяма компания. Тук можете спокойно да приготвите закуска за цялата компания, да организирате вечеря с приятели или просто да се насладите на сутрешното си кафе в уютната атмосфера на дома.
+                    </p>
+                    <ul
+                      class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
+                    >
+                      <li>Фурна</li>
+                      <li>Котлон</li>
+                      <li>Микроволновка</li>
+                      <li>Хладилници</li>
+                      <li>Машина за лед</li>
+                      <li>Пълен набор от прибори</li>
+                      <li>Кухненска посуда</li>
+                      <li>Всички необходими консумативи</li>
+                    </ul>
+                    
+                  </div>
+                </details>
+
+                <details class="group py-5" data-od-id="guide-outdoor">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                    Външно пространство
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      Външно пространство, създадено за дълги дни и спокойни вечери сред природата. Потопете се в топлите води на джакузито, отпуснете се на шезлонг под сянката на чадъра или се съберете около масата с близки и приятели.
+                      <br>
+                      <br>
+                      Терасите са обособени уютни кътчета с маси и столове — идеалното място за сутрешно кафе, докато пред вас се разкриват гледките към язовира и гората. Тук всеки момент има свой ритъм — от първото кафе на изгрев до вечерните разговори под звездите.
+                    </p>
+                    <ul
+                      class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
+                    >
+                      <li>Отопляемо частно джакузи</li>
+                      <li>Шезлонзи и чадъри</li>
+                      <li>Пространство за събиране</li>
+                      <li>Тераси с маси и столове</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="group py-5" data-od-id="guide-experiences">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                    Наблизо и през сезоните
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      <!-- REPLACE: Tailor activities to your region -->
+                      <strong class="text-charcoal-800 font-medium"
+                        >Зима:</strong
+                      >
+                      Разходки край язовир Сопот и в гората около с. Голяма
+                      Желязна, уютни вечери край камината и тишина, далеч от
+                      града.
+                    </p>
+                    <p>
+                      <strong class="text-charcoal-800 font-medium"
+                        >Лято и есен:</strong
+                      >
+                      Риболов и водни спортове на язовир Сопот, горски пътеки,
+                      колоездене около водата и разходка до пещера Топля. Златните цветове на гората правят есенния престой
+                      особено красив.
+                    </p>
+
+                  </div>
+                </details>
+
+                <details class="group py-5" data-od-id="guide-practical">
+                  <summary
+                    class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
+                  >
+                    Практическа информация
+                  </summary>
+                  <div
+                    class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
+                  >
+                    <p>
+                      <strong class="text-charcoal-800 font-medium"
+                        >Настаняване / напускане:</strong
+                      >
+                      13:00 настаняване · 10:00 напускане.
+                    </p>
+                    <p>
+                      <strong class="text-charcoal-800 font-medium"
+                        >Паркиране:</strong
+                      >
+                     Паркинг който побира 5 автомобила
+                    </p>
+                    <p>
+                      <strong class="text-charcoal-800 font-medium"
+                        >Правила на къщата:</strong
+                      >
+                      Без тютюнопушене в спалните. Без изхвърляне на отпадъци в тоалетната.
+                    </p>
+                    <p>
+                      Въпроси преди резервация? Обадете се на линията за
+                      резервации в
+                      <a
+                        href="#contact"
+                        class="text-sage-600 underline underline-offset-2 hover:text-sage-700 transition-colors"
+                        >секцията за контакт</a
+                      >
+                      — ще ви помогнем с дати, брой гости и специални заявки.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== GALLERY ========== -->
+      <section id="gallery" class="py-24 md:py-32 px-6 bg-cream-100/50">
+        <div class="mx-auto max-w-7xl">
+          <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">
+              Галерия
+            </p>
+            <h2 class="font-serif section-title text-charcoal-900 mb-6">
+              Поглед отвътре
+            </h2>
+            <p class="text-charcoal-600 leading-relaxed">
+              Всеки ъгъл разказва история за сдържана елегантност и хармония с
+              природата.
+            </p>
+          </div>
+
+          <div id="gallery-grid">
+            <!-- demo: Unsplash · replace with assets/images/gallery-01.jpg · tall portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-master-suite"
+              data-caption="Главна спалня"
+              data-image="assets/images/hero-villa-exterior.jpg"
+              data-placeholder="from-sage-200 to-sage-300"
+              aria-label="Преглед: Главна спалня"
+            >
+              <img
+                src="assets/images/hero-villa-exterior.jpg"
+                alt="Главна спалня"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-video"
+              data-caption="Видео"
+              data-video="assets/images/IMG_9871.MOV"
+              aria-label="Преглед: Видео"
+            >
+              <video
+                class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                muted
+                loop
+                playsinline
+                autoplay
+                preload="metadata"
+              >
+                <source src="assets/images/IMG_9871.MOV" type="video/mp4" />
+              </video>
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-02.jpg · landscape -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-dining-room"
+              data-caption="Трапезария"
+              data-image="assets/images/gallery-02.jpg"
+              data-placeholder="from-timber-200 to-timber-300"
+              aria-label="Преглед: Трапезария"
+            >
+              <img
+                src="assets/images/gallery-02.jpg"
+                alt="Трапезария"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-03.jpg · portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-outdoor-terrace"
+              data-caption="Външна тераса"
+              data-image="assets/images/gallery-03.jpg"
+              data-placeholder="from-cream-200 to-sage-100"
+              aria-label="Преглед: Външна тераса"
+            >
+              <img
+                src="assets/images/gallery-03.jpg"
+                alt="Външна тераса"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-04.jpg · wide landscape -->
+            <button
+              type="button"
+              class="gallery-item reveal overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-spa-bathroom"
+              data-caption="Спа баня"
+              data-image="assets/images/gallery-04.jpg"
+              data-placeholder="from-sage-100 to-timber-100"
+              aria-label="Преглед: Спа баня"
+            >
+              <img
+                src="assets/images/gallery-04.jpg"
+                alt="Спа баня"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-outdoor-terrace"
+              data-caption="Външна тераса"
+              data-image="assets/images/gallery-03.jpg"
+              data-placeholder="from-cream-200 to-sage-100"
+              aria-label="Преглед: Външна тераса"
+            >
+              <img
+                src="assets/images/gallery-05.jpg"
+                alt="Външна тераса"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-05.jpg · tall portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-forest-trail"
+              data-caption="Горска пътека"
+              data-image="assets/images/gallery-05.jpg"
+              data-placeholder="from-timber-100 to-sage-200"
+              aria-label="Преглед: Горска пътека"
+            >
+              <img
+                src="assets/images/hero-livingroom.jpg"
+                alt="Горска пътека"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-06.jpg · landscape -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[16/11] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-sunset-view"
+              data-caption="Залез"
+              data-image="assets/images/gallery-06.jpg"
+              data-placeholder="from-sage-300 to-charcoal-700"
+              aria-label="Преглед: Залез"
+            >
+              <img
+                src="assets/images/gallery-06.jpg"
+                alt="Залез"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-07.jpg · tall portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-private-jacuzzi"
+              data-caption="Частно джакузи"
+              data-image="assets/images/gallery-07.jpg"
+              aria-label="Преглед: Частно джакузи"
+            >
+              <img
+                src="assets/images/gallery-07.jpg"
+                alt="Частно джакузи"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-08.jpg · landscape -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-gourmet-kitchen"
+              data-caption="Гурме кухня"
+              data-image="assets/images/gallery-08.jpg"
+              aria-label="Преглед: Гурме кухня"
+            >
+              <img
+                src="assets/images/gallery-08.jpg"
+                alt="Гурме кухня"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-09.jpg · portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[4/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-stone-fireplace"
+              data-caption="Каменна камина"
+              data-image="assets/images/gallery-09.jpg"
+              aria-label="Преглед: Каменна камина"
+            >
+              <img
+                src="assets/images/gallery-09.jpg"
+                alt="Каменна камина"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-10.jpg · tall portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-guest-bedroom"
+              data-caption="Гостна спалня"
+              data-image="assets/images/gallery-10.jpg"
+              aria-label="Преглед: Гостна спалня"
+            >
+              <img
+                src="assets/images/gallery-10.jpg"
+                alt="Гостна спалня"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-11.jpg · wide landscape -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-alpine-lake"
+              data-caption="Язовирът"
+              data-image="assets/images/gallery-11.jpg"
+              aria-label="Преглед: Язовирът"
+            >
+              <img
+                src="assets/images/gallery-11.jpg"
+                alt="Язовирът"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <!-- demo: Unsplash · replace with assets/images/gallery-12.jpg · portrait -->
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-cedar-deck"
+              data-caption="Кедрова тераса"
+              data-image="assets/images/gallery-12.jpg"
+              aria-label="Преглед: Кедрова тераса"
+            >
+              <img
+                src="assets/images/gallery-12.jpg"
+                alt="Кедрова тераса"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+           
           </div>
         </div>
-      </article>
-    </div>
-  </section>
+      </section>
 
-  <!-- ========== GALLERY ========== -->
-  <section id="gallery" class="py-24 md:py-32 px-6 bg-cream-100/50">
-    <div class="mx-auto max-w-7xl">
-      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">Gallery</p>
-        <h2 class="font-serif section-title text-charcoal-900 mb-6">A Glimpse Inside</h2>
-        <p class="text-charcoal-600 leading-relaxed">Every corner tells a story of understated elegance and natural harmony.</p>
+      <!-- Gallery lightbox modal -->
+      <div
+        id="gallery-lightbox"
+        data-od-id="gallery-lightbox"
+        class="fixed inset-0 z-[100]"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-label="Преглед на галерията"
+      >
+        <div
+          id="lightbox-backdrop"
+          class="absolute inset-0 bg-charcoal-900/85 backdrop-blur-md"
+        ></div>
+
+        <button
+          type="button"
+          id="lightbox-close"
+          data-od-id="lightbox-close"
+          class="btn-interactive absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors"
+          aria-label="Затвори галерията"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          id="lightbox-prev"
+          data-od-id="lightbox-prev"
+          class="btn-interactive absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors"
+          aria-label="Предишно изображение"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          id="lightbox-next"
+          data-od-id="lightbox-next"
+          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors active:scale-[0.98]"
+          aria-label="Следващо изображение"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+
+        <div id="lightbox-stage" class="relative z-10 h-full w-full">
+          <!-- Slides injected by JS -->
+        </div>
+
+        <div
+          class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none"
+        >
+          <p
+            id="lightbox-caption"
+            class="font-serif text-xl md:text-2xl text-cream-50 mb-2"
+          ></p>
+          <p
+            id="lightbox-counter"
+            class="text-xs font-medium uppercase eyebrow text-cream-50/60"
+          ></p>
+        </div>
       </div>
 
-      <div id="gallery-grid">
-        <!-- demo: Unsplash · replace with assets/images/gallery-01.jpg · tall portrait -->
-        <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-master-suite" data-caption="Master Suite" data-image="assets/images/gallery-01.jpg" data-placeholder="from-sage-200 to-sage-300" aria-label="View Master Suite">
-          <img src="assets/images/gallery-01.jpg" alt="Master Suite" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Master Suite</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-02.jpg · landscape -->
-        <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-dining-room" data-caption="Dining Room" data-image="assets/images/gallery-02.jpg" data-placeholder="from-timber-200 to-timber-300" aria-label="View Dining Room">
-          <img src="assets/images/gallery-02.jpg" alt="Dining Room" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Dining Room</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-03.jpg · portrait -->
-        <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-outdoor-terrace" data-caption="Outdoor Terrace" data-image="assets/images/gallery-03.jpg" data-placeholder="from-cream-200 to-sage-100" aria-label="View Outdoor Terrace">
-          <img src="assets/images/gallery-03.jpg" alt="Outdoor Terrace" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Outdoor Terrace</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-04.jpg · wide landscape -->
-        <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-spa-bathroom" data-caption="Spa Bathroom" data-image="assets/images/gallery-04.jpg" data-placeholder="from-sage-100 to-timber-100" aria-label="View Spa Bathroom">
-          <img src="assets/images/gallery-04.jpg" alt="Spa Bathroom" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Spa Bathroom</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-05.jpg · tall portrait -->
-        <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-forest-trail" data-caption="Forest Trail" data-image="assets/images/gallery-05.jpg" data-placeholder="from-timber-100 to-sage-200" aria-label="View Forest Trail">
-          <img src="assets/images/gallery-05.jpg" alt="Forest Trail" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Forest Trail</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-06.jpg · landscape -->
-        <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[16/11] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-sunset-view" data-caption="Sunset View" data-image="assets/images/gallery-06.jpg" data-placeholder="from-sage-300 to-charcoal-700" aria-label="View Sunset View">
-          <img src="assets/images/gallery-06.jpg" alt="Sunset View" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Sunset View</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-07.jpg · tall portrait -->
-        <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-private-jacuzzi" data-caption="Private Jacuzzi" data-image="assets/images/gallery-07.jpg" aria-label="View Private Jacuzzi">
-          <img src="assets/images/gallery-07.jpg" alt="Private Jacuzzi" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Private Jacuzzi</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-08.jpg · landscape -->
-        <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-gourmet-kitchen" data-caption="Gourmet Kitchen" data-image="assets/images/gallery-08.jpg" aria-label="View Gourmet Kitchen">
-          <img src="assets/images/gallery-08.jpg" alt="Gourmet Kitchen" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Gourmet Kitchen</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-09.jpg · portrait -->
-        <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[4/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-stone-fireplace" data-caption="Stone Fireplace" data-image="assets/images/gallery-09.jpg" aria-label="View Stone Fireplace">
-          <img src="assets/images/gallery-09.jpg" alt="Stone Fireplace" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Stone Fireplace</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-10.jpg · tall portrait -->
-        <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-guest-bedroom" data-caption="Guest Bedroom" data-image="assets/images/gallery-10.jpg" aria-label="View Guest Bedroom">
-          <img src="assets/images/gallery-10.jpg" alt="Guest Bedroom" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Guest Bedroom</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-11.jpg · wide landscape -->
-        <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-alpine-lake" data-caption="Alpine Lake" data-image="assets/images/gallery-11.jpg" aria-label="View Alpine Lake">
-          <img src="assets/images/gallery-11.jpg" alt="Alpine Lake" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Alpine Lake</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-12.jpg · portrait -->
-        <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-cedar-deck" data-caption="Cedar Deck" data-image="assets/images/gallery-12.jpg" aria-label="View Cedar Deck">
-          <img src="assets/images/gallery-12.jpg" alt="Cedar Deck" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Cedar Deck</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-13.jpg · landscape -->
-        <button type="button" class="gallery-item reveal overflow-hidden rounded-sm aspect-[16/11] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-wine-lounge" data-caption="Wine Lounge" data-image="assets/images/gallery-13.jpg" aria-label="View Wine Lounge">
-          <img src="assets/images/gallery-13.jpg" alt="Wine Lounge" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Wine Lounge</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-14.jpg · portrait -->
-        <button type="button" class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-wellness-spa" data-caption="Wellness Spa" data-image="assets/images/gallery-14.jpg" aria-label="View Wellness Spa">
-          <img src="assets/images/gallery-14.jpg" alt="Wellness Spa" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Wellness Spa</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-        <!-- demo: Unsplash · replace with assets/images/gallery-15.jpg · wide landscape -->
-        <button type="button" class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[16/9] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full" data-od-id="gallery-item-aerial-vista" data-caption="Aerial Vista" data-image="assets/images/gallery-15.jpg" aria-label="View Aerial Vista">
-          <img src="assets/images/gallery-15.jpg" alt="Aerial Vista" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"></div>
-          <span class="gallery-label absolute bottom-4 left-4 z-10 text-xs font-medium uppercase tracking-[0.06em] text-cream-50/90">Aerial Vista</span>
-          <span class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-          </span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery lightbox modal -->
-  <div id="gallery-lightbox" data-od-id="gallery-lightbox" class="fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Gallery viewer">
-    <div id="lightbox-backdrop" class="absolute inset-0 bg-charcoal-900/85 backdrop-blur-md"></div>
-
-    <button type="button" id="lightbox-close" data-od-id="lightbox-close" class="btn-interactive absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Close gallery">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-
-    <button type="button" id="lightbox-prev" data-od-id="lightbox-prev" class="btn-interactive absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors" aria-label="Previous image">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
-    </button>
-    <button type="button" id="lightbox-next" data-od-id="lightbox-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors active:scale-[0.98]" aria-label="Next image">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
-    </button>
-
-    <div id="lightbox-stage" class="relative z-10 h-full w-full">
-      <!-- Slides injected by JS -->
-    </div>
-
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
-      <p id="lightbox-caption" class="font-serif text-xl md:text-2xl text-cream-50 mb-2"></p>
-      <p id="lightbox-counter" class="text-xs font-medium uppercase eyebrow text-cream-50/60"></p>
-    </div>
-  </div>
-
-  <!-- ========== PRICING ========== -->
-  <section id="pricing" class="py-24 md:py-32 px-6">
-    <div class="mx-auto max-w-7xl">
-      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">Rates</p>
-        <h2 class="font-serif section-title text-charcoal-900 mb-6">Stay Packages</h2>
-        <p class="text-charcoal-600 leading-relaxed">Transparent pricing for every kind of mountain escape.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Weekend Rate -->
-        <div class="reveal reveal-delay-1 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col">
-          <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2">Weekend Rate</p>
-          <div class="mb-6">
-            <span class="font-serif text-5xl text-charcoal-900">$450</span>
-            <span class="text-charcoal-500 text-sm"> / night</span>
+      <!-- ========== PRICING ========== -->
+      <section id="pricing" class="py-24 md:py-32 px-6">
+        <div class="mx-auto max-w-7xl">
+          <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">
+              Тарифи
+            </p>
+            <h2 class="font-serif section-title text-charcoal-900 mb-6">
+              Пакети за престой
+            </h2>
+            <p class="text-charcoal-600 leading-relaxed">
+              Прозрачни цени за всеки вид почивка край язовир Сопот.
+            </p>
           </div>
-          <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Fri–Sun stays</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Welcome wine &amp; local treats</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Late checkout (2 PM)</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Housekeeping included</li>
-          </ul>
-          <a href="#contact" class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors">Check Availability</a>
-        </div>
 
-        <!-- Weekly Stay (featured) -->
-        <div class="reveal reveal-delay-2 rounded-2xl border-2 border-sage-400 bg-sage-50/50 p-8 md:p-10 flex flex-col relative shadow-xl shadow-sage-100/60">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sage-500 text-cream-50 text-xs font-medium uppercase eyebrow px-4 py-1 rounded-full whitespace-nowrap">Most Popular</span>
-          <p class="text-sm font-medium uppercase eyebrow text-sage-600 mb-2">Weekly Stay</p>
-          <div class="mb-6">
-            <span class="font-serif text-5xl text-charcoal-900">$380</span>
-            <span class="text-charcoal-500 text-sm"> / night</span>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Weekend Rate -->
+            <div
+              class="reveal reveal-delay-1 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col"
+            >
+              <p
+                class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2"
+              >
+                Уикенд тарифа
+              </p>
+              <div class="mb-6">
+                <span class="font-serif text-5xl text-charcoal-900">$450</span>
+                <span class="text-charcoal-500 text-sm"> / нощувка</span>
+              </div>
+              <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Престой петък–неделя
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Посрещащо вино и местни лакомства
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Късно напускане (14:00)
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Почистване включено
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors"
+                >Проверете наличност</a
+              >
+            </div>
+
+            <!-- Weekly Stay (featured) -->
+            <div
+              class="reveal reveal-delay-2 rounded-2xl border-2 border-sage-400 bg-sage-50/50 p-8 md:p-10 flex flex-col relative shadow-xl shadow-sage-100/60"
+            >
+              <span
+                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sage-500 text-cream-50 text-xs font-medium uppercase eyebrow px-4 py-1 rounded-full whitespace-nowrap"
+                >Най-популярно</span
+              >
+              <p
+                class="text-sm font-medium uppercase eyebrow text-sage-600 mb-2"
+              >
+                Седмичен престой
+              </p>
+              <div class="mb-6">
+                <span class="font-serif text-5xl text-charcoal-900">$380</span>
+                <span class="text-charcoal-500 text-sm"> / нощувка</span>
+              </div>
+              <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Отстъпка при 7+ нощувки
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Частен готвач (1 вечер)
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Водена разходка в природата
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Всички удобства включени
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Гъвкаво настаняване
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="btn-interactive block text-center rounded-full bg-sage-600 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-cream-50 hover:bg-sage-700 transition-colors"
+                >Проверете наличност</a
+              >
+            </div>
+
+            <!-- Season Packages -->
+            <div
+              class="reveal reveal-delay-3 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col"
+            >
+              <p
+                class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2"
+              >
+                Сезонни пакети
+              </p>
+              <div class="mb-6">
+                <span class="font-serif text-5xl text-charcoal-900">$320</span>
+                <span class="text-charcoal-500 text-sm"> / нощувка</span>
+              </div>
+              <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Извънпикови сезонни цени
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Престой от 14+ нощувки
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Кредит за спа процедури ($150)
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg
+                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Трансфер от летището включен
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors"
+                >Проверете наличност</a
+              >
+            </div>
           </div>
-          <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 7+ night discount</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Private chef option (1 evening)</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Guided nature hike</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> All amenities included</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Flexible check-in</li>
-          </ul>
-          <a href="#contact" class="btn-interactive block text-center rounded-full bg-sage-600 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-cream-50 hover:bg-sage-700 transition-colors">Check Availability</a>
         </div>
+      </section>
 
-        <!-- Season Packages -->
-        <div class="reveal reveal-delay-3 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col">
-          <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2">Season Packages</p>
-          <div class="mb-6">
-            <span class="font-serif text-5xl text-charcoal-900">$320</span>
-            <span class="text-charcoal-500 text-sm"> / night</span>
+      <!-- ========== CONTACT ========== -->
+      <section id="contact" class="py-24 md:py-32 px-6 bg-cream-100/50">
+        <div class="mx-auto max-w-7xl">
+          <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+            <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">
+              Контакт
+            </p>
+            <h2 class="font-serif section-title text-charcoal-900 mb-6">
+              Резервирайте своята почивка
+            </h2>
+            <p class="text-charcoal-600 leading-relaxed">
+              Обадете ни се, за да проверим наличност и да резервирате престоя
+              си.
+            </p>
           </div>
-          <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Off-peak seasonal rates</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 14+ night commitment</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Spa treatment credit ($150)</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-sage-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Airport transfer included</li>
-          </ul>
-          <a href="#contact" class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors">Check Availability</a>
+
+          <div class="max-w-3xl mx-auto reveal">
+            <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+              <a
+                href="tel:+359888003702"
+                data-od-id="contact-phone-reservations"
+                class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all focus-visible:border-sage-400"
+              >
+                <p
+                  class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3"
+                >
+                  Резервации
+                </p>
+                <!-- REPLACE: your reservations phone number below -->
+                <p
+                  class="font-serif text-2xl md:text-3xl text-charcoal-900 group-hover:text-sage-700 transition-colors"
+                >
+                  +359 888 003 702
+                </p>
+              </a>
+              <a
+                href="tel:+359889869790"
+                data-od-id="contact-phone-concierge"
+                class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all focus-visible:border-sage-400"
+              >
+                <p
+                  class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3"
+                >
+                Резервации
+                </p>
+                <!-- REPLACE: your concierge phone number below -->
+                <p
+                  class="font-serif text-2xl md:text-3xl text-charcoal-900 group-hover:text-sage-700 transition-colors"
+                >
+                  +359 889 869 790
+                </p>
+              </a>
+            </div>
+            <p class="mt-8 text-center text-sm text-charcoal-500">
+              На разположение всеки ден, 8:00 – 20:00 ч.
+            </p>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="py-12 px-6 border-t border-cream-200">
+      <div
+        class="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-charcoal-500"
+      >
+        <p class="font-serif text-lg text-charcoal-800">
+          Къща за гости
+        </p>
+        <p>&copy; 2026 Къща за гости. Всички права запазени.</p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ========== CONTACT ========== -->
-  <section id="contact" class="py-24 md:py-32 px-6 bg-cream-100/50">
-    <div class="mx-auto max-w-7xl">
-      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-        <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">Contact</p>
-        <h2 class="font-serif section-title text-charcoal-900 mb-6">Reserve Your Escape</h2>
-        <p class="text-charcoal-600 leading-relaxed">Call us to check availability and book your stay.</p>
-      </div>
-
-      <div class="max-w-3xl mx-auto reveal">
-        <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
-          <a href="tel:+19705550123" data-od-id="contact-phone-reservations" class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all focus-visible:border-sage-400">
-            <p class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3">Reservations</p>
-            <!-- REPLACE: your reservations phone number below -->
-            <p class="font-serif text-2xl md:text-3xl text-charcoal-900 group-hover:text-sage-700 transition-colors">+1 (970) 555-0123</p>
-          </a>
-          <a href="tel:+19705550456" data-od-id="contact-phone-concierge" class="group rounded-2xl border border-cream-200 bg-cream-50/80 px-8 py-10 text-center hover:border-sage-300 hover:shadow-md transition-all focus-visible:border-sage-400">
-            <p class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3">Concierge</p>
-            <!-- REPLACE: your concierge phone number below -->
-            <p class="font-serif text-2xl md:text-3xl text-charcoal-900 group-hover:text-sage-700 transition-colors">+1 (970) 555-0456</p>
-          </a>
-        </div>
-        <p class="mt-8 text-center text-sm text-charcoal-500">Available daily, 8am – 8pm MST</p>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="py-12 px-6 border-t border-cream-200">
-    <div class="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-charcoal-500">
-      <p class="font-serif text-lg text-charcoal-800">Mountain Villa</p>
-      <p>&copy; 2026 Mountain Villa. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- ========== JAVASCRIPT ========== -->
-  <script>
-    /* -------------------------------------------------------
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+      /* -------------------------------------------------------
        HERO CAROUSEL — auto-play with cross-fade
        ------------------------------------------------------- */
-    (function initCarousel() {
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dots = document.querySelectorAll('.carousel-dot');
-      const prevBtn = document.getElementById('carousel-prev');
-      const nextBtn = document.getElementById('carousel-next');
-      let current = 0;
-      let autoplayTimer;
-      const INTERVAL = 5000;
+      (function initCarousel() {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const dots = document.querySelectorAll(".carousel-dot");
+        const prevBtn = document.getElementById("carousel-prev");
+        const nextBtn = document.getElementById("carousel-next");
+        let current = 0;
+        let autoplayTimer;
+        const INTERVAL = 5000;
 
-      function goTo(index) {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('is-active');
-        dots[current].setAttribute('aria-selected', 'false');
+        function goTo(index) {
+          slides[current].classList.remove("active");
+          dots[current].classList.remove("is-active");
+          dots[current].setAttribute("aria-selected", "false");
 
-        current = (index + slides.length) % slides.length;
+          current = (index + slides.length) % slides.length;
 
-        slides[current].classList.add('active');
-        dots[current].classList.add('is-active');
-        dots[current].setAttribute('aria-selected', 'true');
-      }
+          slides[current].classList.add("active");
+          dots[current].classList.add("is-active");
+          dots[current].setAttribute("aria-selected", "true");
+        }
 
-      function next() { goTo(current + 1); }
-      function prev() { goTo(current - 1); }
+        function next() {
+          goTo(current + 1);
+        }
+        function prev() {
+          goTo(current - 1);
+        }
 
-      function startAutoplay() {
-        clearInterval(autoplayTimer);
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        autoplayTimer = setInterval(next, INTERVAL);
-      }
+        function startAutoplay() {
+          clearInterval(autoplayTimer);
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            return;
+          autoplayTimer = setInterval(next, INTERVAL);
+        }
 
-      prevBtn.addEventListener('click', () => { prev(); startAutoplay(); });
-      nextBtn.addEventListener('click', () => { next(); startAutoplay(); });
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          goTo(parseInt(dot.dataset.index, 10));
+        prevBtn.addEventListener("click", () => {
+          prev();
           startAutoplay();
         });
-      });
+        nextBtn.addEventListener("click", () => {
+          next();
+          startAutoplay();
+        });
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            goTo(parseInt(dot.dataset.index, 10));
+            startAutoplay();
+          });
+        });
 
-      startAutoplay();
-    })();
+        startAutoplay();
+      })();
 
-    /* -------------------------------------------------------
+      /* -------------------------------------------------------
        INTERSECTION OBSERVER — fade-in / slide-up on scroll
        ------------------------------------------------------- */
-    (function initReveal() {
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
-      );
-      reveals.forEach(el => observer.observe(el));
-    })();
+      (function initReveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+        );
+        reveals.forEach((el) => observer.observe(el));
+      })();
 
-    /* -------------------------------------------------------
+      /* -------------------------------------------------------
        MOBILE MENU
        ------------------------------------------------------- */
-    (function initMobileMenu() {
-      const btn = document.getElementById('mobile-menu-btn');
-      const menu = document.getElementById('mobile-menu');
-      function setOpen(open) {
-        menu.classList.toggle('hidden', !open);
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      }
-      btn.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
-      document.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => setOpen(false));
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !menu.classList.contains('hidden')) setOpen(false);
-      });
-    })();
+      (function initMobileMenu() {
+        const btn = document.getElementById("mobile-menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        function setOpen(open) {
+          menu.classList.toggle("hidden", !open);
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+          btn.setAttribute(
+            "aria-label",
+            open ? "Затвори менюто" : "Отвори менюто"
+          );
+        }
+        btn.addEventListener("click", () =>
+          setOpen(menu.classList.contains("hidden"))
+        );
+        document.querySelectorAll(".mobile-link").forEach((link) => {
+          link.addEventListener("click", () => setOpen(false));
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && !menu.classList.contains("hidden"))
+            setOpen(false);
+        });
+      })();
 
-    /* -------------------------------------------------------
+      /* -------------------------------------------------------
        HEADER — subtle shadow on scroll
        ------------------------------------------------------- */
-    (function initHeaderScroll() {
-      const bar = document.getElementById('header-bar');
-      if (!bar) return;
-      const onScroll = () => {
-        bar.classList.toggle('shadow-md', window.scrollY > 24);
-        bar.classList.toggle('shadow-sm', window.scrollY <= 24);
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
+      (function initHeaderScroll() {
+        const bar = document.getElementById("header-bar");
+        if (!bar) return;
+        const onScroll = () => {
+          bar.classList.toggle("shadow-md", window.scrollY > 24);
+          bar.classList.toggle("shadow-sm", window.scrollY <= 24);
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
 
-    /* -------------------------------------------------------
+      /* -------------------------------------------------------
        GALLERY LIGHTBOX — fullscreen viewer with swipe & keys
        ------------------------------------------------------- */
-    (function initGalleryLightbox() {
-      const items = Array.from(document.querySelectorAll('#gallery-grid .gallery-item'));
-      const lightbox = document.getElementById('gallery-lightbox');
-      const stage = document.getElementById('lightbox-stage');
-      const caption = document.getElementById('lightbox-caption');
-      const counter = document.getElementById('lightbox-counter');
-      const closeBtn = document.getElementById('lightbox-close');
-      const prevBtn = document.getElementById('lightbox-prev');
-      const nextBtn = document.getElementById('lightbox-next');
-      const backdrop = document.getElementById('lightbox-backdrop');
-      if (!items.length || !lightbox || !stage) return;
+      (function initGalleryLightbox() {
+        const items = Array.from(
+          document.querySelectorAll("#gallery-grid .gallery-item")
+        );
+        const lightbox = document.getElementById("gallery-lightbox");
+        const stage = document.getElementById("lightbox-stage");
+        const caption = document.getElementById("lightbox-caption");
+        const counter = document.getElementById("lightbox-counter");
+        const closeBtn = document.getElementById("lightbox-close");
+        const prevBtn = document.getElementById("lightbox-prev");
+        const nextBtn = document.getElementById("lightbox-next");
+        const backdrop = document.getElementById("lightbox-backdrop");
+        if (!items.length || !lightbox || !stage) return;
 
-      const slides = items.map((item, i) => {
-        const imgEl = item.querySelector('img');
-        const src = item.dataset.image || (imgEl ? imgEl.getAttribute('src') : '');
-        const cap = item.dataset.caption || '';
-        const placeholder = item.dataset.placeholder || 'from-sage-200 to-sage-300';
-        const slide = document.createElement('div');
-        slide.className = 'lightbox-slide';
-        slide.dataset.index = String(i);
-        if (src) {
-          slide.innerHTML = '<img src="' + src + '" alt="' + cap.replace(/"/g, '&quot;') + '" />';
-        } else {
-          slide.innerHTML = '<div class="lightbox-placeholder bg-gradient-to-br ' + placeholder + ' flex items-center justify-center"><span class="text-sm font-medium uppercase tracking-[0.25em] text-cream-50/70">' + cap + '</span></div>';
+        const slides = items.map((item, i) => {
+          const imgEl = item.querySelector("img");
+          const videoSrc = item.dataset.video || "";
+          const src =
+            item.dataset.image || (imgEl ? imgEl.getAttribute("src") : "");
+          const cap = item.dataset.caption || "";
+          const placeholder =
+            item.dataset.placeholder || "from-sage-200 to-sage-300";
+          const slide = document.createElement("div");
+          slide.className = "lightbox-slide";
+          slide.dataset.index = String(i);
+          if (videoSrc) {
+            slide.innerHTML =
+              '<video controls playsinline preload="metadata"><source src="' +
+              videoSrc +
+              '" type="video/mp4" /></video>';
+          } else if (src) {
+            slide.innerHTML =
+              '<img src="' +
+              src +
+              '" alt="' +
+              cap.replace(/"/g, "&quot;") +
+              '" />';
+          } else {
+            slide.innerHTML =
+              '<div class="lightbox-placeholder bg-gradient-to-br ' +
+              placeholder +
+              ' flex items-center justify-center"><span class="text-sm font-medium uppercase tracking-[0.25em] text-cream-50/70">' +
+              cap +
+              "</span></div>";
+          }
+          stage.appendChild(slide);
+          return slide;
+        });
+
+        let current = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let lastFocused = null;
+
+        const focusableSelector =
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+        function getFocusable() {
+          return Array.from(
+            lightbox.querySelectorAll(focusableSelector)
+          ).filter(
+            (el) => !el.hasAttribute("disabled") && el.offsetParent !== null
+          );
         }
-        stage.appendChild(slide);
-        return slide;
-      });
 
-      let current = 0;
-      let touchStartX = 0;
-      let touchStartY = 0;
-      let lastFocused = null;
-
-      const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-
-      function getFocusable() {
-        return Array.from(lightbox.querySelectorAll(focusableSelector))
-          .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
-      }
-
-      function trapFocus(e) {
-        if (!lightbox.classList.contains('is-open') || e.key !== 'Tab') return;
-        const focusable = getFocusable();
-        if (!focusable.length) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
-
-      function paint() {
-        slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
-        caption.textContent = items[current].dataset.caption || '';
-        counter.textContent = (current + 1) + ' / ' + items.length;
-      }
-
-      function open(index) {
-        current = (index + items.length) % items.length;
-        paint();
-        lastFocused = document.activeElement;
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('lightbox-open');
-        closeBtn.focus();
-        document.addEventListener('keydown', trapFocus);
-      }
-
-      function close() {
-        lightbox.classList.remove('is-open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('lightbox-open');
-        document.removeEventListener('keydown', trapFocus);
-        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
-        else if (items[current]) items[current].focus();
-      }
-
-      function go(delta) {
-        current = (current + delta + items.length) % items.length;
-        paint();
-      }
-
-      items.forEach((item, i) => {
-        item.addEventListener('click', () => open(i));
-        item.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+        function trapFocus(e) {
+          if (!lightbox.classList.contains("is-open") || e.key !== "Tab")
+            return;
+          const focusable = getFocusable();
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
             e.preventDefault();
-            open(i);
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+
+        function pauseLightboxVideos() {
+          stage.querySelectorAll("video").forEach((video) => {
+            video.pause();
+          });
+        }
+
+        function paint() {
+          pauseLightboxVideos();
+          slides.forEach((slide, i) =>
+            slide.classList.toggle("active", i === current)
+          );
+          caption.textContent = items[current].dataset.caption || "";
+          counter.textContent = current + 1 + " / " + items.length;
+        }
+
+        function open(index) {
+          current = (index + items.length) % items.length;
+          paint();
+          lastFocused = document.activeElement;
+          lightbox.classList.add("is-open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("lightbox-open");
+          closeBtn.focus();
+          document.addEventListener("keydown", trapFocus);
+        }
+
+        function close() {
+          pauseLightboxVideos();
+          lightbox.classList.remove("is-open");
+          lightbox.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("lightbox-open");
+          document.removeEventListener("keydown", trapFocus);
+          if (lastFocused && typeof lastFocused.focus === "function")
+            lastFocused.focus();
+          else if (items[current]) items[current].focus();
+        }
+
+        function go(delta) {
+          current = (current + delta + items.length) % items.length;
+          paint();
+        }
+
+        items.forEach((item, i) => {
+          item.addEventListener("click", () => open(i));
+          item.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              open(i);
+            }
+          });
+        });
+
+        closeBtn.addEventListener("click", close);
+        backdrop.addEventListener("click", close);
+        prevBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          go(-1);
+        });
+        nextBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          go(1);
+        });
+
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) close();
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (!lightbox.classList.contains("is-open")) return;
+          if (e.key === "Escape") {
+            e.preventDefault();
+            close();
+          } else if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            go(-1);
+          } else if (e.key === "ArrowRight") {
+            e.preventDefault();
+            go(1);
           }
         });
-      });
 
-      closeBtn.addEventListener('click', close);
-      backdrop.addEventListener('click', close);
-      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); go(-1); });
-      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); go(1); });
+        lightbox.addEventListener(
+          "touchstart",
+          (e) => {
+            if (!lightbox.classList.contains("is-open")) return;
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+          },
+          { passive: true }
+        );
 
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) close();
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('is-open')) return;
-        if (e.key === 'Escape') { e.preventDefault(); close(); }
-        else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
-        else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
-      });
-
-      lightbox.addEventListener('touchstart', (e) => {
-        if (!lightbox.classList.contains('is-open')) return;
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
-      }, { passive: true });
-
-      lightbox.addEventListener('touchend', (e) => {
-        if (!lightbox.classList.contains('is-open')) return;
-        const dx = e.changedTouches[0].screenX - touchStartX;
-        const dy = e.changedTouches[0].screenY - touchStartY;
-        if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
-        if (dx < 0) go(1);
-        else go(-1);
-      }, { passive: true });
-    })();
-
-  </script>
-</body>
+        lightbox.addEventListener(
+          "touchend",
+          (e) => {
+            if (!lightbox.classList.contains("is-open")) return;
+            const dx = e.changedTouches[0].screenX - touchStartX;
+            const dy = e.changedTouches[0].screenY - touchStartY;
+            if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+            if (dx < 0) go(1);
+            else go(-1);
+          },
+          { passive: true }
+        );
+      })();
+    </script>
+  </body>
 </html>
