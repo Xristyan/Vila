@@ -91,10 +91,26 @@
             "petsAllowed": false,
             "priceRange": "$$",
             "amenityFeature": [
-              { "@type": "LocationFeatureSpecification", "name": "Гледка към язовира", "value": true },
-              { "@type": "LocationFeatureSpecification", "name": "Камина", "value": true },
-              { "@type": "LocationFeatureSpecification", "name": "Джакузи", "value": true },
-              { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Гледка към язовира",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Камина",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Джакузи",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Wi-Fi",
+                "value": true
+              }
             ],
             "areaServed": ["Троян", "Ловеч", "София"]
           },
@@ -599,7 +615,6 @@
               />
             </div>
             <div class="absolute inset-0 bg-charcoal-900/20"></div>
-            </div>
           </div>
           <!-- Slide 3 — demo: Unsplash · replace with assets/images/hero-living-area.jpg -->
           <div class="carousel-slide" data-index="2">
@@ -620,7 +635,7 @@
 
         <!-- Hero overlay content -->
         <div
-          class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+          class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center pointer-events-none"
         >
           <h1
             class="reveal visible reveal-delay-1 font-serif hero-title font-medium text-cream-50"
@@ -636,7 +651,7 @@
           <a
             href="#contact"
             data-od-id="hero-cta"
-            class="reveal visible reveal-delay-3 mt-10 inline-flex items-center justify-center min-h-[2.75rem] rounded-full bg-cream-50/90 px-8 py-3.5 text-sm font-medium btn-label text-charcoal-800 hover:bg-cream-50 transition-colors shadow-lg"
+            class="reveal visible reveal-delay-3 mt-10 inline-flex items-center justify-center min-h-[2.75rem] rounded-full bg-cream-50/90 px-8 py-3.5 text-sm font-medium btn-label text-charcoal-800 hover:bg-cream-50 transition-colors shadow-lg pointer-events-auto"
           >
             Резервирайте
           </a>
@@ -644,8 +659,9 @@
 
         <!-- Carousel controls -->
         <button
+          type="button"
           id="carousel-prev"
-          class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors"
+          class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors"
           aria-label="Предишен слайд"
         >
           <svg
@@ -663,8 +679,9 @@
           </svg>
         </button>
         <button
+          type="button"
           id="carousel-next"
-          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors"
+          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center min-w-[2.75rem] min-h-[2.75rem] rounded-full bg-cream-50/30 backdrop-blur-sm text-cream-50 hover:bg-cream-50/50 transition-colors"
           aria-label="Следващ слайд"
         >
           <svg
@@ -951,19 +968,25 @@
                     class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
                   >
                     <p>
-                      Домът предлага комфортно настаняване за до 10 гости, разпределени в 4 уютни спални и 5 бани. Всяка спалня разполага със собствена баня и тераса, осигурявайки необходимото лично пространство и спокойствие за всеки гост.
-                      <br>
-                      <br>
-                      Всички спални са оборудвани с удобно двойно легло, гардероб, скрин с огледало и затъмняващи завеси за пълноценна почивка. В две от спалните е предвидено и допълнително разтегателно легло, подходящо за настаняване на още гости.
-                      <br>
-                      <br>
+                      Домът предлага комфортно настаняване за до 10 гости,
+                      разпределени в 4 уютни спални и 5 бани. Всяка спалня
+                      разполага със собствена баня и тераса, осигурявайки
+                      необходимото лично пространство и спокойствие за всеки
+                      гост.
+                      <br />
+                      <br />
+                      Всички спални са оборудвани с удобно двойно легло,
+                      гардероб, скрин с огледало и затъмняващи завеси за
+                      пълноценна почивка. В две от спалните е предвидено и
+                      допълнително разтегателно легло, подходящо за настаняване
+                      на още гости.
+                      <br />
+                      <br />
                     </p>
                     <ul
                       class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
                     >
-                      <li>
-                        4 спални с двойни легла
-                      </li>
+                      <li>4 спални с двойни легла</li>
                       <li>Собствена баня към всяка спалня</li>
                       <li>Собствена тераса към всяка спалня</li>
                       <li>2 спални с допълнително разтегателно легло</li>
@@ -977,20 +1000,27 @@
                   <summary
                     class="flex items-center justify-between gap-4 font-serif text-xl text-charcoal-900"
                   >
-                  Дневна
+                    Дневна
                   </summary>
                   <div
                     class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
                   >
                     <p>
-                      Просторно и светло помещение, създадено за споделени моменти, събирания и дълги вечери с близки и приятели. Панорамните прозорци обгръщат пространството и разкриват прекрасна гледка към язовира и гората, превръщайки природата в част от атмосферата.
-
-                      Уютна камина допълва усещането за топлина и комфорт, а телевизорът и климатикът осигуряват всичко необходимо за приятно прекарване по всяко време на годината. Пространството е достатъчно голямо, за да събере всички гости и да се превърне в естествения център на дома — място за разговори, смях и незабравими вечери.
+                      Просторно и светло помещение, създадено за споделени
+                      моменти, събирания и дълги вечери с близки и приятели.
+                      Панорамните прозорци обгръщат пространството и разкриват
+                      прекрасна гледка към язовира и гората, превръщайки
+                      природата в част от атмосферата. Уютна камина допълва
+                      усещането за топлина и комфорт, а телевизорът и климатикът
+                      осигуряват всичко необходимо за приятно прекарване по
+                      всяко време на годината. Пространството е достатъчно
+                      голямо, за да събере всички гости и да се превърне в
+                      естествения център на дома — място за разговори, смях и
+                      незабравими вечери.
                     </p>
                     <ul
                       class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
                     >
-                      <li>Отопляемо частно джакузи</li>
                       <li>Панорамни прозорци към язовира и гората</li>
                       <li>Камина за уютни вечери</li>
                       <li>Телевизор и климатик</li>
@@ -1008,21 +1038,28 @@
                     class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
                   >
                     <p>
-                      Модерна и просторна кухня, в която ще откриете всичко необходимо за приготвянето на вкусни ястия и приятни моменти около трапезата. Разполага с фурна, котлони, микроволновка, хладилници, машина за лед, пълен набор от прибори и кухненска посуда, както и всичко необходимо за комфортното пребиваване на голяма компания. Тук можете спокойно да приготвите закуска за цялата компания, да организирате вечеря с приятели или просто да се насладите на сутрешното си кафе в уютната атмосфера на дома.
+                      Модерна и просторна кухня, в която ще откриете всичко
+                      необходимо за приготвянето на вкусни ястия и приятни
+                      моменти около трапезата. Разполага с фурна, котлони,
+                      микровълнова печка, хладилници, машина за лед, пълен набор
+                      от прибори и кухненска посуда, както и всичко необходимо
+                      за комфортното пребиваване на голяма компания. Тук можете
+                      спокойно да приготвите закуска за цялата компания, да
+                      организирате вечеря с приятели или просто да се насладите
+                      на сутрешното си кафе в уютната атмосфера на дома.
                     </p>
                     <ul
                       class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
                     >
                       <li>Фурна</li>
                       <li>Котлон</li>
-                      <li>Микроволновка</li>
+                      <li>Микровълнова печка</li>
                       <li>Хладилници</li>
                       <li>Машина за лед</li>
                       <li>Пълен набор от прибори</li>
                       <li>Кухненска посуда</li>
                       <li>Всички необходими консумативи</li>
                     </ul>
-                    
                   </div>
                 </details>
 
@@ -1036,10 +1073,17 @@
                     class="mt-4 text-sm text-charcoal-600 leading-relaxed space-y-3 pr-8"
                   >
                     <p>
-                      Външно пространство, създадено за дълги дни и спокойни вечери сред природата. Потопете се в топлите води на джакузито, отпуснете се на шезлонг под сянката на чадъра или се съберете около масата с близки и приятели.
-                      <br>
-                      <br>
-                      Терасите са обособени уютни кътчета с маси и столове — идеалното място за сутрешно кафе, докато пред вас се разкриват гледките към язовира и гората. Тук всеки момент има свой ритъм — от първото кафе на изгрев до вечерните разговори под звездите.
+                      Външно пространство, създадено за дълги дни и спокойни
+                      вечери сред природата. Потопете се в топлите води на
+                      джакузито, отпуснете се на шезлонг под сянката на чадъра
+                      или се съберете около масата с близки и приятели.
+                      <br />
+                      <br />
+                      Терасите са обособени уютни кътчета с маси и столове —
+                      идеалното място за сутрешно кафе, докато пред вас се
+                      разкриват гледките към язовира и гората. Тук всеки момент
+                      има свой ритъм — от първото кафе на изгрев до вечерните
+                      разговори под звездите.
                     </p>
                     <ul
                       class="grid sm:grid-cols-2 gap-x-6 gap-y-2 list-disc list-inside marker:text-sage-500"
@@ -1075,10 +1119,10 @@
                         >Лято и есен:</strong
                       >
                       Риболов и водни спортове на язовир Сопот, горски пътеки,
-                      колоездене около водата и разходка до пещера Топля. Златните цветове на гората правят есенния престой
-                      особено красив.
+                      колоездене около водата и разходка до пещера Топля.
+                      Златните цветове на гората правят есенния престой особено
+                      красив.
                     </p>
-
                   </div>
                 </details>
 
@@ -1101,13 +1145,14 @@
                       <strong class="text-charcoal-800 font-medium"
                         >Паркиране:</strong
                       >
-                     Паркинг който побира 5 автомобила
+                      Паркинг който побира 5 автомобила
                     </p>
                     <p>
                       <strong class="text-charcoal-800 font-medium"
                         >Правила на къщата:</strong
                       >
-                      Без тютюнопушене в спалните. Без изхвърляне на отпадъци в тоалетната.
+                      Без тютюнопушене в спалните. Без изхвърляне на отпадъци в
+                      тоалетната.
                     </p>
                     <p>
                       Въпроси преди резервация? Обадете се на линията за
@@ -1156,7 +1201,9 @@
               <img
                 src="assets/images/hero-villa-exterior.jpg"
                 alt="Фасада на къщата за гости край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1214,7 +1261,9 @@
               <img
                 src="assets/images/gallery-02.jpg"
                 alt="Трапезария в къщата за гости в Голяма Желязна"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1250,7 +1299,47 @@
               <img
                 src="assets/images/gallery-03.jpg"
                 alt="Външна тераса край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
+              ></div>
+              <span
+                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
+              data-od-id="gallery-item-inner-courtyard"
+              data-image="assets/images/gallery-13.jpg"
+              data-placeholder="from-timber-200 to-timber-300"
+              aria-label="Преглед: Вътрешен двор"
+            >
+              <img
+                src="assets/images/gallery-13.jpg"
+                alt="Вътрешен двор на къщата за гости в Голяма Желязна"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1286,7 +1375,9 @@
               <img
                 src="assets/images/gallery-04.jpg"
                 alt="Баня в къщата за гости край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1311,41 +1402,6 @@
               </span>
             </button>
 
-            <button
-              type="button"
-              class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
-              data-od-id="gallery-item-outdoor-terrace"
-              data-image="assets/images/gallery-03.jpg"
-              data-placeholder="from-cream-200 to-sage-100"
-              aria-label="Преглед: Външна тераса"
-            >
-              <img
-                src="assets/images/gallery-05.jpg"
-                alt="Тераса на къщата за гости в Голяма Желязна"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
-              />
-              <div
-                class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
-              ></div>
-              <span
-                class="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/80 text-charcoal-800 opacity-0 group-hover:opacity-100 transition-opacity"
-                aria-hidden="true"
-              >
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
-                  />
-                </svg>
-              </span>
-            </button>
             <!-- demo: Unsplash · replace with assets/images/gallery-05.jpg · tall portrait -->
             <button
               type="button"
@@ -1358,7 +1414,9 @@
               <img
                 src="assets/images/hero-livingroom.jpg"
                 alt="Всекидневна на къщата за гости край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1394,7 +1452,9 @@
               <img
                 src="assets/images/gallery-06.jpg"
                 alt="Залез над язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1429,7 +1489,9 @@
               <img
                 src="assets/images/gallery-07.jpg"
                 alt="Частно джакузи в Голяма Желязна"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1464,7 +1526,9 @@
               <img
                 src="assets/images/gallery-08.jpg"
                 alt="Кухня на къщата за гости край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1499,7 +1563,9 @@
               <img
                 src="assets/images/gallery-09.jpg"
                 alt="Камина в къщата за гости в Голяма Желязна"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1534,7 +1600,9 @@
               <img
                 src="assets/images/gallery-10.jpg"
                 alt="Спалня в къщата за гости край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1569,7 +1637,9 @@
               <img
                 src="assets/images/gallery-11.jpg"
                 alt="Язовир Сопот до с. Голяма Желязна"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1604,7 +1674,9 @@
               <img
                 src="assets/images/gallery-12.jpg"
                 alt="Тераса към гората край язовир Сопот"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
@@ -1628,7 +1700,6 @@
                 </svg>
               </span>
             </button>
-           
           </div>
         </div>
       </section>
@@ -1674,7 +1745,7 @@
           type="button"
           id="lightbox-prev"
           data-od-id="lightbox-prev"
-          class="btn-interactive absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors"
+          class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors"
           aria-label="Предишно изображение"
         >
           <svg
@@ -1695,7 +1766,7 @@
           type="button"
           id="lightbox-next"
           data-od-id="lightbox-next"
-          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors active:scale-[0.98]"
+          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50/15 backdrop-blur-md text-cream-50 hover:bg-cream-50/25 transition-colors"
           aria-label="Следващо изображение"
         >
           <svg
@@ -1732,10 +1803,10 @@
         <div class="mx-auto max-w-7xl">
           <div class="text-center max-w-2xl mx-auto mb-16 reveal">
             <p class="text-sm font-medium uppercase eyebrow text-sage-500 mb-4">
-              Тарифи
+              Тарифа
             </p>
             <h2 class="font-serif section-title text-charcoal-900 mb-6">
-              Пакети за престой
+              Пакет за престой
             </h2>
             <p class="text-charcoal-600 leading-relaxed">
               Прозрачни цени за всеки вид почивка край язовир Сопот.
@@ -1743,144 +1814,24 @@
           </div>
 
           <div class="grid md:grid-cols-3 gap-8">
-            <!-- Weekend Rate -->
-            <div
-              class="reveal reveal-delay-1 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col"
-            >
-              <p
-                class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2"
-              >
-                Уикенд тарифа
-              </p>
-              <div class="mb-6">
-                <span class="font-serif text-5xl text-charcoal-900">$450</span>
-                <span class="text-charcoal-500 text-sm"> / нощувка</span>
-              </div>
-              <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Престой петък–неделя
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Посрещащо вино и местни лакомства
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Късно напускане (14:00)
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Почистване включено
-                </li>
-              </ul>
-              <a
-                href="#contact"
-                class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors"
-                >Проверете наличност</a
-              >
-            </div>
-
             <!-- Weekly Stay (featured) -->
             <div
-              class="reveal reveal-delay-2 rounded-2xl border-2 border-sage-400 bg-sage-50/50 p-8 md:p-10 flex flex-col relative shadow-xl shadow-sage-100/60"
+              class="reveal col-start-2 reveal-delay-2 rounded-2xl border-2 border-sage-400 bg-sage-50/50 p-8 md:p-10 flex flex-col relative shadow-xl shadow-sage-100/60"
             >
-              <span
+              <!-- <span
                 class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sage-500 text-cream-50 text-xs font-medium uppercase eyebrow px-4 py-1 rounded-full whitespace-nowrap"
                 >Най-популярно</span
-              >
+              > -->
               <p
                 class="text-sm font-medium uppercase eyebrow text-sage-600 mb-2"
               >
-                Седмичен престой
+                Престой
               </p>
               <div class="mb-6">
-                <span class="font-serif text-5xl text-charcoal-900">$380</span>
+                <span class="font-serif text-5xl text-charcoal-900">250€</span>
                 <span class="text-charcoal-500 text-sm"> / нощувка</span>
               </div>
               <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Отстъпка при 7+ нощувки
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Частен готвач (1 вечер)
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Водена разходка в природата
-                </li>
                 <li class="flex items-start gap-2">
                   <svg
                     class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
@@ -1895,102 +1846,10 @@
                   </svg>
                   Всички удобства включени
                 </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-600 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Гъвкаво настаняване
-                </li>
               </ul>
               <a
                 href="#contact"
                 class="btn-interactive block text-center rounded-full bg-sage-600 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-cream-50 hover:bg-sage-700 transition-colors"
-                >Проверете наличност</a
-              >
-            </div>
-
-            <!-- Season Packages -->
-            <div
-              class="reveal reveal-delay-3 rounded-2xl border border-cream-200 bg-cream-50 p-8 md:p-10 flex flex-col"
-            >
-              <p
-                class="text-sm font-medium uppercase eyebrow text-sage-500 mb-2"
-              >
-                Сезонни пакети
-              </p>
-              <div class="mb-6">
-                <span class="font-serif text-5xl text-charcoal-900">$320</span>
-                <span class="text-charcoal-500 text-sm"> / нощувка</span>
-              </div>
-              <ul class="space-y-3 text-sm text-charcoal-600 mb-8 flex-grow">
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Извънпикови сезонни цени
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Престой от 14+ нощувки
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Кредит за спа процедури ($150)
-                </li>
-                <li class="flex items-start gap-2">
-                  <svg
-                    class="w-4 h-4 mt-0.5 text-sage-500 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  Трансфер от летището включен
-                </li>
-              </ul>
-              <a
-                href="#contact"
-                class="btn-interactive block text-center rounded-full border border-sage-300 px-6 py-3 min-h-[2.75rem] text-sm font-medium btn-label text-sage-700 hover:bg-sage-50 transition-colors"
                 >Проверете наличност</a
               >
             </div>
@@ -2041,7 +1900,7 @@
                 <p
                   class="text-xs font-medium uppercase eyebrow text-sage-500 mb-3"
                 >
-                Резервации
+                  Резервации
                 </p>
                 <!-- REPLACE: your concierge phone number below -->
                 <p
@@ -2069,9 +1928,13 @@
         </p>
         <address class="not-italic text-center md:text-right">
           с. Голяма Желязна, община Троян, област Ловеч, 5670<br />
-          <a href="tel:+359888003702" class="hover:text-sage-600">+359 888 003 702</a>
+          <a href="tel:+359888003702" class="hover:text-sage-600"
+            >+359 888 003 702</a
+          >
         </address>
-        <p>&copy; 2026 Къща за гости край язовир Сопот. Всички права запазени.</p>
+        <p>
+          &copy; 2026 Къща за гости край язовир Сопот. Всички права запазени.
+        </p>
       </div>
     </footer>
 
