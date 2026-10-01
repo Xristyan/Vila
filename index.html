@@ -35,8 +35,11 @@
     <meta property="og:url" content="https://www.bratyakotsevi.com/" />
     <meta
       property="og:image"
-      content="https://www.bratyakotsevi.com/assets/images/hero-villa-exterior.jpg"
+      content="https://www.bratyakotsevi.com/assets/images/og-image.jpg"
     />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
       content="При Братя Коцеви — къща за гости край язовир Сопот в с. Голяма Желязна"
@@ -52,9 +55,13 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.bratyakotsevi.com/assets/images/hero-villa-exterior.jpg"
+      content="https://www.bratyakotsevi.com/assets/images/og-image.jpg"
     />
     <meta name="theme-color" content="#566a4c" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -68,9 +75,9 @@
             "url": "https://www.bratyakotsevi.com/",
             "telephone": ["+359888003702", "+359889869790"],
             "image": [
-              "https://www.bratyakotsevi.com/assets/images/hero-villa-exterior.jpg",
-              "https://www.bratyakotsevi.com/assets/images/hero-livingroom.jpg",
-              "https://www.bratyakotsevi.com/assets/images/gallery-11.jpg"
+              "https://www.bratyakotsevi.com/assets/images/hero-villa-exterior.webp",
+              "https://www.bratyakotsevi.com/assets/images/hero-livingroom.webp",
+              "https://www.bratyakotsevi.com/assets/images/gallery-11.webp"
             ],
             "address": {
               "@type": "PostalAddress",
@@ -89,7 +96,9 @@
             "checkinTime": "16:00",
             "checkoutTime": "11:00",
             "petsAllowed": false,
-            "priceRange": "$$",
+            "priceRange": "250 € / нощувка",
+            "currenciesAccepted": "EUR",
+            "logo": "https://www.bratyakotsevi.com/icon-512.png",
             "amenityFeature": [
               {
                 "@type": "LocationFeatureSpecification",
@@ -112,7 +121,16 @@
                 "value": true
               }
             ],
-            "areaServed": ["Троян", "Ловеч", "София"]
+            "areaServed": ["Троян", "Ловеч", "София"],
+            "containsPlace": {
+              "@type": "House",
+              "name": "При Братя Коцеви",
+              "occupancy": {
+                "@type": "QuantitativeValue",
+                "maxValue": 10,
+                "unitText": "гости"
+              }
+            }
           },
           {
             "@type": "WebSite",
@@ -586,45 +604,42 @@
         aria-label="Начало"
       >
         <div id="carousel" class="absolute inset-0">
-          <!-- Slide 1 — demo: Unsplash · replace with assets/images/hero-villa-exterior.jpg -->
           <div class="carousel-slide active" data-index="0">
             <div class="absolute inset-0">
               <img
-                src="assets/images/hero-villa-exterior.jpg"
+                src="assets/images/hero-villa-exterior.webp"
                 alt="Външно джакузи на къщата за гости край язовир Сопот"
                 class="w-full h-full object-cover"
-                width="1920"
-                height="1280"
+                width="1600"
+                height="1200"
                 fetchpriority="high"
                 decoding="async"
               />
             </div>
             <div class="absolute inset-0 bg-charcoal-900/25"></div>
           </div>
-          <!-- Slide 2 — demo: Unsplash · replace with assets/images/hero-mountain-panorama.jpg -->
           <div class="carousel-slide" data-index="1">
             <div class="absolute inset-0">
               <img
-                src="assets/images/hero-livingroom.jpg"
+                src="assets/images/hero-livingroom.webp"
                 alt="Хол на къщата за гости край язовир Сопот"
                 class="w-full h-full object-cover"
-                width="1920"
-                height="1280"
+                width="2000"
+                height="1500"
                 loading="lazy"
                 decoding="async"
               />
             </div>
             <div class="absolute inset-0 bg-charcoal-900/20"></div>
           </div>
-          <!-- Slide 3 — demo: Unsplash · replace with assets/images/hero-living-area.jpg -->
           <div class="carousel-slide" data-index="2">
             <div class="absolute inset-0">
               <img
-                src="assets/images/gallery-07.jpg"
+                src="assets/images/gallery-07.webp"
                 alt="Спалня в къщата за гости край язовир Сопот"
                 class="w-full h-full object-cover"
-                width="1920"
-                height="1280"
+                width="2000"
+                height="1500"
                 loading="lazy"
                 decoding="async"
               />
@@ -1189,17 +1204,16 @@
           </div>
 
           <div id="gallery-grid">
-            <!-- demo: Unsplash · replace with assets/images/gallery-01.jpg · tall portrait -->
             <button
               type="button"
               class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-master-suite"
-              data-image="assets/images/hero-villa-exterior.jpg"
+              data-image="assets/images/hero-villa-exterior.webp"
               data-placeholder="from-sage-200 to-sage-300"
               aria-label="Преглед: Главна спалня"
             >
               <img
-                src="assets/images/hero-villa-exterior.jpg"
+                src="assets/images/hero-villa-exterior.webp"
                 alt="Фасада на къщата за гости край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1232,7 +1246,7 @@
               type="button"
               class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-video"
-              data-video="assets/images/IMG_9871.MOV"
+              data-video="assets/images/video-terasa.mp4"
               aria-label="Преглед: Видео"
             >
               <video
@@ -1242,24 +1256,24 @@
                 playsinline
                 autoplay
                 preload="metadata"
+                poster="assets/images/video-terasa-poster.webp"
               >
-                <source src="assets/images/IMG_9871.MOV" type="video/mp4" />
+                <source src="assets/images/video-terasa.mp4" type="video/mp4" />
               </video>
               <div
                 class="absolute inset-0 bg-charcoal-900/10 group-hover:bg-charcoal-900/5 transition-colors"
               ></div>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-02.jpg · landscape -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-dining-room"
-              data-image="assets/images/gallery-02.jpg"
+              data-image="assets/images/gallery-02.webp"
               data-placeholder="from-timber-200 to-timber-300"
               aria-label="Преглед: Трапезария"
             >
               <img
-                src="assets/images/gallery-02.jpg"
+                src="assets/images/gallery-02.webp"
                 alt="Трапезария в къщата за гости в Голяма Желязна"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1287,17 +1301,16 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-03.jpg · portrait -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-outdoor-terrace"
-              data-image="assets/images/gallery-03.jpg"
+              data-image="assets/images/gallery-03.webp"
               data-placeholder="from-cream-200 to-sage-100"
               aria-label="Преглед: Външна тераса"
             >
               <img
-                src="assets/images/gallery-03.jpg"
+                src="assets/images/gallery-03.webp"
                 alt="Външна тераса край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1330,12 +1343,12 @@
               type="button"
               class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-inner-courtyard"
-              data-image="assets/images/gallery-13.jpg"
+              data-image="assets/images/gallery-13.webp"
               data-placeholder="from-timber-200 to-timber-300"
               aria-label="Преглед: Вътрешен двор"
             >
               <img
-                src="assets/images/gallery-13.jpg"
+                src="assets/images/gallery-13.webp"
                 alt="Вътрешен двор на къщата за гости в Голяма Желязна"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1363,17 +1376,16 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-04.jpg · wide landscape -->
             <button
               type="button"
               class="gallery-item reveal overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-spa-bathroom"
-              data-image="assets/images/gallery-04.jpg"
+              data-image="assets/images/gallery-04.webp"
               data-placeholder="from-sage-100 to-timber-100"
               aria-label="Преглед: Спа баня"
             >
               <img
-                src="assets/images/gallery-04.jpg"
+                src="assets/images/gallery-04.webp"
                 alt="Баня в къщата за гости край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1402,17 +1414,16 @@
               </span>
             </button>
 
-            <!-- demo: Unsplash · replace with assets/images/gallery-05.jpg · tall portrait -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-forest-trail"
-              data-image="assets/images/gallery-05.jpg"
+              data-image="assets/images/gallery-05.webp"
               data-placeholder="from-timber-100 to-sage-200"
               aria-label="Преглед: Горска пътека"
             >
               <img
-                src="assets/images/hero-livingroom.jpg"
+                src="assets/images/hero-livingroom.webp"
                 alt="Всекидневна на къщата за гости край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1440,17 +1451,16 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-06.jpg · landscape -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[16/11] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-sunset-view"
-              data-image="assets/images/gallery-06.jpg"
+              data-image="assets/images/gallery-06.webp"
               data-placeholder="from-sage-300 to-charcoal-700"
               aria-label="Преглед: Залез"
             >
               <img
-                src="assets/images/gallery-06.jpg"
+                src="assets/images/gallery-06.webp"
                 alt="Залез над язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1478,16 +1488,15 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-07.jpg · tall portrait -->
             <button
               type="button"
               class="gallery-item reveal overflow-hidden rounded-sm aspect-[3/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-private-jacuzzi"
-              data-image="assets/images/gallery-07.jpg"
+              data-image="assets/images/gallery-07.webp"
               aria-label="Преглед: Частно джакузи"
             >
               <img
-                src="assets/images/gallery-07.jpg"
+                src="assets/images/gallery-07.webp"
                 alt="Частно джакузи в Голяма Желязна"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1515,16 +1524,15 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-08.jpg · landscape -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[16/10] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-gourmet-kitchen"
-              data-image="assets/images/gallery-08.jpg"
+              data-image="assets/images/gallery-08.webp"
               aria-label="Преглед: Гурме кухня"
             >
               <img
-                src="assets/images/gallery-08.jpg"
+                src="assets/images/gallery-08.webp"
                 alt="Кухня на къщата за гости край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1552,16 +1560,15 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-09.jpg · portrait -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[4/5] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-stone-fireplace"
-              data-image="assets/images/gallery-09.jpg"
+              data-image="assets/images/gallery-09.webp"
               aria-label="Преглед: Каменна камина"
             >
               <img
-                src="assets/images/gallery-09.jpg"
+                src="assets/images/gallery-09.webp"
                 alt="Камина в къщата за гости в Голяма Желязна"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1589,16 +1596,15 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-10.jpg · tall portrait -->
             <button
               type="button"
               class="gallery-item reveal overflow-hidden rounded-sm aspect-[2/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-guest-bedroom"
-              data-image="assets/images/gallery-10.jpg"
+              data-image="assets/images/gallery-10.webp"
               aria-label="Преглед: Гостна спалня"
             >
               <img
-                src="assets/images/gallery-10.jpg"
+                src="assets/images/gallery-10.webp"
                 alt="Спалня в къщата за гости край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1626,16 +1632,15 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-11.jpg · wide landscape -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-1 overflow-hidden rounded-sm aspect-[5/3] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-alpine-lake"
-              data-image="assets/images/gallery-11.jpg"
+              data-image="assets/images/gallery-11.webp"
               aria-label="Преглед: Язовирът"
             >
               <img
-                src="assets/images/gallery-11.jpg"
+                src="assets/images/gallery-11.webp"
                 alt="Язовир Сопот до с. Голяма Желязна"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -1663,16 +1668,15 @@
                 </svg>
               </span>
             </button>
-            <!-- demo: Unsplash · replace with assets/images/gallery-12.jpg · portrait -->
             <button
               type="button"
               class="gallery-item reveal reveal-delay-2 overflow-hidden rounded-sm aspect-[3/4] relative cursor-pointer text-left group border-0 bg-transparent p-0 w-full"
               data-od-id="gallery-item-cedar-deck"
-              data-image="assets/images/gallery-12.jpg"
+              data-image="assets/images/gallery-12.webp"
               aria-label="Преглед: Кедрова тераса"
             >
               <img
-                src="assets/images/gallery-12.jpg"
+                src="assets/images/gallery-12.webp"
                 alt="Тераса към гората край язовир Сопот"
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
